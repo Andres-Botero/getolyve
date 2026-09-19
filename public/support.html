@@ -10,17 +10,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
+    <div class="page-bg" aria-hidden="true">
+      <div class="orb orb-a" data-parallax="0.08"></div>
+      <div class="orb orb-b" data-parallax="0.16"></div>
+    </div>
     <header class="site-header">
-      <a class="wordmark" href="/">Olyve</a>
-      <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
-      <nav>
-        <a href="/">Product</a>
-        <a class="is-current" href="/support">Support</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
-      </nav>
+      <div class="header-inner">
+        <a class="wordmark" href="/" aria-label="Olyve home">
+          <img class="logo logo-light" src="/olyve_logo.png" alt="Olyve" width="140" height="36" />
+          <img class="logo logo-dark" src="/olyve_logo_dark.png" alt="Olyve" width="140" height="36" />
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
+        <nav>
+          <a href="/">Product</a>
+          <a class="is-current" href="/support">Support</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Dark</button>
+        </nav>
+      </div>
     </header>
     <main class="prose">
       <p class="eyebrow">Support</p>

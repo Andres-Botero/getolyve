@@ -16,36 +16,64 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
+    <div class="page-bg" aria-hidden="true">
+      <div class="orb orb-a" data-parallax="0.08"></div>
+      <div class="orb orb-b" data-parallax="0.16"></div>
+      <div class="orb orb-c" data-parallax="0.1"></div>
+    </div>
+
     <header class="site-header">
-      <a class="wordmark" href="/">Olyve</a>
-      <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
-      <nav>
-        <a href="/#features">Product</a>
-        <a href="/support">Support</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
-        <a href="https://axialmotion.com">Axial Motion</a>
-      </nav>
+      <div class="header-inner">
+        <a class="wordmark" href="/" aria-label="Olyve home">
+          <img class="logo logo-light" src="/olyve_logo.png" alt="Olyve" width="140" height="36" />
+          <img class="logo logo-dark" src="/olyve_logo_dark.png" alt="Olyve" width="140" height="36" />
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
+        <nav>
+          <a href="/#features">Product</a>
+          <a href="/support">Support</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="https://axialmotion.com">Axial Motion</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Dark</button>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section class="hero">
-        <p class="eyebrow">For service businesses</p>
-        <h1>Keep the work in one place.</h1>
-        <p class="lede">
-          Olyve is operations software for teams in the field. Clients, visits,
-          estimates, invoices, and inbox — so the day is not spread across
-          texts, calendars, and notebooks.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="/support">Get support</a>
-          <a class="btn btn-ghost" href="https://axialmotion.com">Built by Axial Motion</a>
+        <div class="hero-inner">
+          <p class="eyebrow">For service businesses</p>
+          <h1>Keep the work in one place.</h1>
+          <p class="lede">
+            Olyve is operations software for teams in the field. Clients, visits,
+            estimates, invoices, and inbox — so the day is not spread across
+            texts, calendars, and notebooks.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/support">Get support</a>
+            <a class="btn btn-ghost" href="https://axialmotion.com">Built by Axial Motion</a>
+          </div>
         </div>
       </section>
 
-      <section id="features" class="features">
+      <section id="features" class="features" data-reveal>
         <p class="eyebrow">Product</p>
         <h2>What Olyve does</h2>
         <p class="section-copy">
@@ -72,7 +100,7 @@
         </div>
       </section>
 
-      <section class="built-by">
+      <section class="built-by" data-reveal>
         <p class="eyebrow">Company</p>
         <h2>Made by Axial Motion</h2>
         <p class="section-copy">
@@ -82,7 +110,7 @@
         <p><a href="https://axialmotion.com">axialmotion.com</a></p>
       </section>
 
-      <section class="legal">
+      <section class="legal" data-reveal>
         <p class="eyebrow">Legal</p>
         <h2>Policies stores and users can open</h2>
         <div class="legal-list">
