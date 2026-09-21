@@ -34,25 +34,6 @@
     toggle.setAttribute("aria-expanded", String(open));
   });
 
-  if (!reduceMotion) {
-    const layers = document.querySelectorAll("[data-parallax]");
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const y = window.scrollY;
-        layers.forEach((layer) => {
-          const speed = Number(layer.getAttribute("data-parallax")) || 0.12;
-          layer.style.transform = `translate3d(0, ${y * speed}px, 0)`;
-        });
-        ticking = false;
-      });
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-  }
-
   if (!reduceMotion && "IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
       (entries) => {
