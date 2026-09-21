@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Olyve — Clients, visits, and the invoice from the stop</title>
+    <title>Olyve — Run your business, not your paperwork</title>
     <meta
       name="description"
-      content="Olyve is for home-service operators. Clients, the week's visits, estimates, invoices, payments, and inbox — so Tuesday is not a notebook and a promise to invoice Friday."
+      content="Olyve helps home service professionals manage clients, schedules, services, invoices, payments, and communication from one place."
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,7 +42,7 @@
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
         <nav>
-          <a href="/#product">Product</a>
+          <a href="/#overview">Product</a>
           <a href="/support">Support</a>
           <a href="https://axialmotion.com">Axial Motion</a>
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Dark</button>
@@ -50,39 +50,164 @@
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-inner">
-          <div class="hero-copy">
-            <p class="eyebrow">For home-service operators</p>
-            <h1>Tuesday has four&nbsp;stops.</h1>
-            <p class="lede">
-              One still needs an invoice. That’s the kind of day Olyve is for.
-              Clients, the calendar, and the bill from the visit — not a
-              notebook and a promise to invoice Friday.
-            </p>
-            <div class="store-badges" role="group" aria-label="App availability">
-              <span class="store-badge" aria-disabled="true">
-                <small>Coming soon</small>
-                <strong>App Store</strong>
-              </span>
-              <span class="store-badge" aria-disabled="true">
-                <small>Coming soon</small>
-                <strong>Google Play</strong>
-              </span>
-            </div>
-          </div>
-          <figure class="shot">
-            <div class="phone">
-              <img src="/shots/home-today.png" alt="Olyve Home with today’s visit count and the main tiles" />
-              <div class="shot-fallback" aria-hidden="true">
-                <span class="shot-file">shots/home-today.png</span>
-                <span>Home, light theme. Visit count visible. Inbox, Clients, Services, Calendar tiles. iPhone, no debug banner.</span>
+    <section class="hero" aria-label="Olyve">
+      <div class="hero-carousel" data-hero-carousel>
+        <div class="hero-track" data-hero-track>
+          <article class="hero-slide" aria-label="1 of 4">
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow">For home service professionals</p>
+              <h1>Run your business, not your paperwork.</h1>
+              <p class="lede">
+                Manage clients, schedules, services, invoices, payments, and
+                communication from one place.
+              </p>
+              <p class="section-copy">
+                Olyve helps landscapers, pool cleaners, house cleaners,
+                pressure washers, handymen, and other service providers stay
+                organized and look professional.
+              </p>
+              <div class="store-badges" role="group" aria-label="App availability">
+                <span class="store-badge" aria-disabled="true">
+                  <small>Download on the</small>
+                  <strong>App Store</strong>
+                </span>
+                <span class="store-badge" aria-disabled="true">
+                  <small>Get it on</small>
+                  <strong>Google Play</strong>
+                </span>
               </div>
             </div>
-            <figcaption>Home — today’s visits</figcaption>
-          </figure>
+            <figure class="shot">
+              <div class="phone">
+                <img src="/shots/home-today.png" alt="Olyve Home with today’s visits" />
+                <div class="shot-fallback" aria-hidden="true">
+                  <span class="shot-file">shots/home-today.png</span>
+                  <span>Today’s visits dashboard. Light theme. iPhone, no debug banner.</span>
+                </div>
+              </div>
+              <figcaption>Today’s visits</figcaption>
+            </figure>
+          </div>
+          </article>
+
+          <article class="hero-slide" aria-label="2 of 4">
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow">The problem we set out to solve</p>
+              <h1>Home services lack visibility.</h1>
+              <p class="lede">
+                Customers don’t know when the next visit is scheduled. They
+                don’t know what was completed at the last visit. They aren’t
+                sure whether an invoice has been paid or is still outstanding.
+              </p>
+              <p class="section-copy">
+                Service providers spend too much time answering questions
+                that should already have answers. Olyve keeps everyone on
+                the same page.
+              </p>
+            </div>
+            <figure class="shot">
+              <div class="phone">
+                <img src="/shots/visit-timeline.png" alt="A visit moving from scheduled to completed, invoiced, and paid" />
+                <div class="shot-fallback" aria-hidden="true">
+                  <span class="shot-file">shots/visit-timeline.png</span>
+                  <span>Timeline: Scheduled → Completed → Invoiced → Paid.</span>
+                </div>
+              </div>
+              <figcaption>Scheduled → paid</figcaption>
+            </figure>
+          </div>
+          </article>
+
+          <article class="hero-slide" aria-label="3 of 4">
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow">For service providers</p>
+              <h1>Fewer phone calls. Fewer texts. Better communication.</h1>
+              <p class="lede">Give clients instant access to:</p>
+              <ul class="check-list">
+                <li>Upcoming visits</li>
+                <li>Service notifications</li>
+                <li>Visit history</li>
+                <li>Invoices and payments</li>
+                <li>Direct messaging</li>
+              </ul>
+              <p class="section-copy">
+                When customers have answers, you spend less time chasing
+                updates and more time growing your business.
+              </p>
+            </div>
+            <figure class="shot">
+              <div class="phone">
+                <img src="/shots/inbox-notifications.png" alt="Olyve Inbox on the Notifications tab" />
+                <div class="shot-fallback" aria-hidden="true">
+                  <span class="shot-file">shots/inbox-notifications.png</span>
+                  <span>Inbox → Notifications. At least a few items. Light theme.</span>
+                </div>
+              </div>
+              <figcaption>Notifications inbox</figcaption>
+            </figure>
+          </div>
+          </article>
+
+          <article class="hero-slide" aria-label="4 of 4">
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow">For service providers and clients</p>
+              <h1>Document every service performed.</h1>
+              <p class="lede">
+                Record exactly what was completed during each visit and keep
+                a permanent history for your clients.
+              </p>
+              <p class="section-copy">
+                Whether it’s mowing, trimming, mulching, pool cleaning,
+                window washing, or home maintenance, everybody knows what
+                was done and when it was done.
+              </p>
+              <ul class="check-list">
+                <li>Service history</li>
+                <li>Completed tasks</li>
+                <li>Visit notes</li>
+                <li>Proof of work</li>
+              </ul>
+            </div>
+            <figure class="shot">
+              <div class="phone">
+                <img src="/shots/service-details.png" alt="Olyve visit or service details" />
+                <div class="shot-fallback" aria-hidden="true">
+                  <span class="shot-file">shots/service-details.png</span>
+                  <span>Service / visit details. Completed work and notes visible.</span>
+                </div>
+              </div>
+              <figcaption>Service details</figcaption>
+            </figure>
+          </div>
+          </article>
         </div>
+        <div class="hero-nav">
+          <button type="button" class="hero-arrow" data-hero-prev aria-label="Previous slide">‹</button>
+          <div class="hero-dots" data-hero-dots>
+            <button type="button" class="hero-dot is-active" aria-label="Go to slide 1" aria-current="true"></button>
+            <button type="button" class="hero-dot" aria-label="Go to slide 2"></button>
+            <button type="button" class="hero-dot" aria-label="Go to slide 3"></button>
+            <button type="button" class="hero-dot" aria-label="Go to slide 4"></button>
+          </div>
+          <button type="button" class="hero-arrow" data-hero-next aria-label="Next slide">›</button>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="overview" class="who" data-reveal>
+        <p class="eyebrow">For home service professionals</p>
+        <h2>Stop managing your business through texts and notebooks.</h2>
+        <p class="section-copy">
+          Schedules, clients, invoices, payments, communication, and service
+          history. Solve the pain point most landscapers, cleaners, pool
+          companies, and maintenance businesses understand.
+        </p>
+        <p class="punch">All in one place.</p>
       </section>
 
       <section id="product" class="story" data-reveal>

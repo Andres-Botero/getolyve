@@ -163,10 +163,99 @@ nav a.is-current { color: var(--ink); }
 
 .hero {
   position: relative;
-  padding: 72px 0 48px;
+  width: 100%;
+  padding: 56px 0 36px;
+}
+
+.hero-carousel {
+  width: 100%;
+  min-width: 0;
+}
+
+.hero-track {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.hero-track::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-track.is-dragging,
+.hero-track.is-jumping,
+.hero-track.is-settling {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.hero-track.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.hero-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.hero-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.hero-arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  background: var(--glass-strong);
+  color: var(--ink);
+  border-radius: 999px;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.hero-arrow:hover {
+  border-color: var(--ink);
+}
+
+.hero-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hero-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 22%, transparent);
+  cursor: pointer;
+}
+
+.hero-dot.is-active {
+  width: 22px;
+  background: var(--ink);
 }
 
 .hero-inner {
+  width: min(1040px, calc(100% - 48px));
+  margin-inline: auto;
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 260px;
@@ -174,7 +263,38 @@ nav a.is-current { color: var(--ink); }
   align-items: center;
 }
 
-.hero h1 { max-width: 12ch; }
+.hero h1 {
+  max-width: 16ch;
+  font-size: clamp(36px, 6vw, 64px);
+}
+
+.hero-copy .section-copy { margin-top: 16px; }
+
+.check-list {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 1.4em;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.check-list li + li { margin-top: 6px; }
+
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--forest-mid);
+  font-weight: 700;
+}
+
+html[data-theme="dark"] .check-list li::before { color: var(--sage); }
 
 .eyebrow {
   margin: 0 0 14px;
@@ -314,6 +434,14 @@ html[data-theme="dark"] .store-badge {
 .who .section-copy,
 .built-by .section-copy {
   max-width: 42ch;
+}
+
+.punch {
+  margin: 18px 0 0;
+  max-width: 42ch;
+  color: var(--ink);
+  font-size: 19px;
+  font-weight: 600;
 }
 
 .shot {
