@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Olyve — Operations software for service businesses</title>
+    <title>Olyve — Clients, visits, and the invoice from the stop</title>
     <meta
       name="description"
-      content="Olyve helps field service teams keep clients, schedules, estimates, invoices, and inbox in one place. Built by Axial Motion."
+      content="Olyve is for home-service operators. Clients, the week's visits, estimates, invoices, payments, and inbox — so Tuesday is not a notebook and a promise to invoice Friday."
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,9 +33,9 @@
   </head>
   <body>
     <div class="page-bg" aria-hidden="true">
-      <div class="orb orb-a" data-parallax="0.08"></div>
-      <div class="orb orb-b" data-parallax="0.16"></div>
-      <div class="orb orb-c" data-parallax="0.1"></div>
+      <div class="wash wash-sky" data-parallax="0.1"></div>
+      <div class="wash wash-band" data-parallax="0.18"></div>
+      <div class="wash wash-ground" data-parallax="0.06"></div>
     </div>
 
     <header class="site-header">
@@ -46,10 +46,8 @@
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
         <nav>
-          <a href="/#features">Product</a>
+          <a href="/#product">Product</a>
           <a href="/support">Support</a>
-          <a href="/privacy">Privacy</a>
-          <a href="/terms">Terms</a>
           <a href="https://axialmotion.com">Axial Motion</a>
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Dark</button>
         </nav>
@@ -59,66 +57,163 @@
     <main>
       <section class="hero">
         <div class="hero-inner">
-          <p class="eyebrow">For service businesses</p>
-          <h1>Keep the work in one place.</h1>
-          <p class="lede">
-            Olyve is operations software for teams in the field. Clients, visits,
-            estimates, invoices, and inbox — so the day is not spread across
-            texts, calendars, and notebooks.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="/support">Get support</a>
-            <a class="btn btn-ghost" href="https://axialmotion.com">Built by Axial Motion</a>
+          <div class="hero-copy">
+            <p class="eyebrow">For home-service operators</p>
+            <h1>Tuesday has four&nbsp;stops.</h1>
+            <p class="lede">
+              One still needs an invoice. That’s the kind of day Olyve is for.
+              Clients, the calendar, and the bill from the visit — not a
+              notebook and a promise to invoice Friday.
+            </p>
+            <div class="store-badges" role="group" aria-label="App availability">
+              <span class="store-badge" aria-disabled="true">
+                <small>Coming soon</small>
+                <strong>App Store</strong>
+              </span>
+              <span class="store-badge" aria-disabled="true">
+                <small>Coming soon</small>
+                <strong>Google Play</strong>
+              </span>
+            </div>
           </div>
+          <figure class="shot">
+            <div class="phone">
+              <img src="/shots/home-today.png" alt="Olyve Home with today’s visit count and the main tiles" />
+              <div class="shot-fallback" aria-hidden="true">
+                <span class="shot-file">shots/home-today.png</span>
+                <span>Home, light theme. Visit count visible. Inbox, Clients, Services, Calendar tiles. iPhone, no debug banner.</span>
+              </div>
+            </div>
+            <figcaption>Home — today’s visits</figcaption>
+          </figure>
         </div>
       </section>
 
-      <section id="features" class="features" data-reveal>
-        <p class="eyebrow">Product</p>
-        <h2>What Olyve does</h2>
-        <p class="section-copy">
-          Built for landscapers, pest control, pool, and other home-service
-          operators who need a system of record, not another dashboard.
-        </p>
-        <div class="feature-grid">
-          <article class="card">
-            <h3>Clients</h3>
-            <p>People and companies, addresses, phones, and the services you do for them.</p>
-          </article>
-          <article class="card">
-            <h3>Calendar</h3>
-            <p>Visits on a real calendar, including when one client has more than one provider.</p>
-          </article>
-          <article class="card">
-            <h3>Inbox</h3>
-            <p>Threads with your clients so the conversation sits next to the job.</p>
-          </article>
-          <article class="card">
-            <h3>Estimates and invoices</h3>
-            <p>Quotes, invoices, and payment tracking without a separate billing tool.</p>
-          </article>
+      <section id="product" class="story" data-reveal>
+        <div class="story-copy">
+          <p class="eyebrow">The day</p>
+          <h2>Put the visit on the calendar. Bill it from there.</h2>
+          <p class="section-copy">
+            Schedule a service. Mark it done. From a completed visit you
+            generate the invoice or record the payment — the amount comes from
+            that visit, not a blank form. After it’s billed, it’s View Invoice.
+          </p>
         </div>
+        <div class="story-media story-pair">
+          <figure class="shot">
+            <div class="phone">
+              <img src="/shots/calendar-day.png" alt="Olyve Calendar showing a day with several visits" />
+              <div class="shot-fallback" aria-hidden="true">
+                <span class="shot-file">shots/calendar-day.png</span>
+                <span>Calendar, light theme. A real day, 3–4 visits, mixed statuses.</span>
+              </div>
+            </div>
+            <figcaption>Calendar — a day with visits</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="phone">
+              <img src="/shots/visit-invoice.png" alt="Generate Invoice on a completed visit, with the visit summary and locked subtotal" />
+              <div class="shot-fallback" aria-hidden="true">
+                <span class="shot-file">shots/visit-invoice.png</span>
+                <span>Completed visit → Generate Invoice. Visit summary and locked subtotal.</span>
+              </div>
+            </div>
+            <figcaption>Visit — generate the invoice</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="clients" class="story is-flip" data-reveal>
+        <div class="story-copy">
+          <p class="eyebrow">The book</p>
+          <h2>Clients, then the services you do for them.</h2>
+          <p class="section-copy">
+            People or companies, on an A–Z list you can search. Add one by
+            hand, or import from contacts, a file, or a paste. Services are
+            your price list. Attach them to a client before you put a visit on
+            the week.
+          </p>
+        </div>
+        <div class="story-media">
+          <figure class="shot">
+            <div class="phone">
+              <img src="/shots/clients-list.png" alt="Olyve Clients list, people and companies A to Z" />
+              <div class="shot-fallback" aria-hidden="true">
+                <span class="shot-file">shots/clients-list.png</span>
+                <span>Clients A–Z, mix of person and company. Light theme. Not an empty list.</span>
+              </div>
+            </div>
+            <figcaption>Clients — the book</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="money" class="story" data-reveal>
+        <div class="story-copy">
+          <p class="eyebrow">The money</p>
+          <h2>Quote it, bill the visit, see what’s still open.</h2>
+          <p class="section-copy">
+            An estimate can be one-time, weekly, biweekly, or monthly. Invoices
+            and payments sit with the work. Reports for this week or this
+            month: completed visits you haven’t invoiced yet, what’s
+            outstanding, and how that compares to last time.
+          </p>
+        </div>
+        <div class="story-media">
+          <figure class="shot">
+            <div class="phone">
+              <img src="/shots/reports-month.png" alt="Olyve Reports for this month, with unbilled or outstanding work" />
+              <div class="shot-fallback" aria-hidden="true">
+                <span class="shot-file">shots/reports-month.png</span>
+                <span>My Reports, This month. Unbilled visits or outstanding visible.</span>
+              </div>
+            </div>
+            <figcaption>Reports — this month</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="inbox" class="story is-flip" data-reveal>
+        <div class="story-copy">
+          <p class="eyebrow">Inbox</p>
+          <h2>The thread sits next to the job.</h2>
+          <p class="section-copy">
+            Notifications in one tab, messages in the other. If a client uses
+            Olyve, they see their schedule and can write you there. That’s the
+            whole idea.
+          </p>
+        </div>
+        <div class="story-media">
+          <figure class="shot">
+            <div class="phone">
+              <img src="/shots/inbox-messages.png" alt="Olyve Inbox on the Messages tab with a client thread" />
+              <div class="shot-fallback" aria-hidden="true">
+                <span class="shot-file">shots/inbox-messages.png</span>
+                <span>Inbox → Messages. At least one thread. Light theme.</span>
+              </div>
+            </div>
+            <figcaption>Inbox — messages</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="who" class="who" data-reveal>
+        <p class="eyebrow">Who it’s for</p>
+        <h2>If the week is a list of addresses, this is for you.</h2>
+        <p class="section-copy">
+          Landscaping, pest, pool, cleaning, and shops that look like them. If
+          you still keep the book in your head, you’re who we built it for.
+        </p>
       </section>
 
       <section class="built-by" data-reveal>
         <p class="eyebrow">Company</p>
         <h2>Made by Axial Motion</h2>
         <p class="section-copy">
-          Axial Motion is the studio behind Olyve. The app is in private beta
-          and will be listed on the App Store and Google Play.
+          Olyve is in private beta. It’ll be on the App Store and Google Play.
+          Until then, this is the site.
         </p>
         <p><a href="https://axialmotion.com">axialmotion.com</a></p>
-      </section>
-
-      <section class="legal" data-reveal>
-        <p class="eyebrow">Legal</p>
-        <h2>Policies stores and users can open</h2>
-        <div class="legal-list">
-          <a class="card" href="/privacy"><h3>Privacy policy</h3><p>What we collect, why, and how to ask us to delete it.</p></a>
-          <a class="card" href="/terms"><h3>Terms of service</h3><p>The rules for using the Olyve app and this website.</p></a>
-          <a class="card" href="/support"><h3>Support</h3><p>How to reach us about the product or your account.</p></a>
-          <a class="card" href="/delete-account"><h3>Delete account</h3><p>How to request deletion of your Olyve account and data.</p></a>
-        </div>
       </section>
     </main>
 

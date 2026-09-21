@@ -35,12 +35,18 @@
   });
 
   if (!reduceMotion) {
-    const orbs = document.querySelectorAll("[data-parallax]");
+    const layers = document.querySelectorAll("[data-parallax]");
+    let ticking = false;
     const onScroll = () => {
-      const y = window.scrollY;
-      orbs.forEach((orb) => {
-        const speed = Number(orb.getAttribute("data-parallax")) || 0.12;
-        orb.style.transform = `translate3d(0, ${y * speed}px, 0)`;
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        layers.forEach((layer) => {
+          const speed = Number(layer.getAttribute("data-parallax")) || 0.12;
+          layer.style.transform = `translate3d(0, ${y * speed}px, 0)`;
+        });
+        ticking = false;
       });
     };
     onScroll();
@@ -60,4 +66,15 @@
   } else {
     document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("is-visible"));
   }
+
+  document.querySelectorAll(".shot img").forEach((img) => {
+    const shot = img.closest(".shot");
+    const mark = () => {
+      if (img.naturalWidth > 0) shot?.classList.add("has-image");
+      else shot?.classList.remove("has-image");
+    };
+    img.addEventListener("load", mark);
+    img.addEventListener("error", () => shot?.classList.remove("has-image"));
+    if (img.complete) mark();
+  });
 })();
