@@ -180,8 +180,18 @@ nav a.is-current { color: var(--ink); }
   scroll-padding-inline: 0;
   overscroll-behavior-x: contain;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-x;
   scrollbar-width: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .hero-track {
+    touch-action: pan-y;
+  }
+
+  .hero-track.is-dragging,
+  .hero-track.is-settling {
+    touch-action: none;
+  }
 }
 
 .hero-track::-webkit-scrollbar {

@@ -90,11 +90,15 @@
     let jumping = false;
     let settling = false;
     let touching = false;
+    let axis = null;
     let settleFrame = 0;
     let startX = 0;
+    let startY = 0;
     let startScroll = 0;
     const AUTOPLAY_MS = 7000;
     const canHover = window.matchMedia("(hover: hover)").matches;
+    const isPhone = () =>
+      window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 
     const width = () => track.clientWidth;
     const maxPhysical = count + 1;
@@ -120,9 +124,12 @@
 
     const armAutoplay = () => {
       stopAutoplay();
-      if (reduceMotion || busy() || document.hidden) return;
+      if (reduceMotion || document.hidden) return;
       autoplayTimer = window.setTimeout(() => {
-        if (busy()) return;
+        if (busy()) {
+          autoplayTimer = 0;
+          return;
+        }
         goPhysical(physical + 1);
       }, AUTOPLAY_MS);
     };
@@ -150,15 +157,13 @@
           apply();
           track.classList.remove("is-jumping");
           jumping = false;
-          armAutoplay();
         });
       });
     };
 
-    const finishOnCloneOrArm = () => {
+    const finishOnClone = () => {
       if (physical === 0) jumpTo(count);
       else if (physical === maxPhysical) jumpTo(1);
-      else armAutoplay();
     };
 
     const stopSettle = () => {
@@ -171,7 +176,6 @@
     const settleTo = (p) => {
       if (settleFrame) cancelAnimationFrame(settleFrame);
       settleFrame = 0;
-      stopAutoplay();
 
       p = Math.max(0, Math.min(maxPhysical, p));
       const w = width();
@@ -186,11 +190,14 @@
       if (reduceMotion || Math.abs(to - from) < 1) {
         track.scrollTo({ left: to, behavior: "auto" });
         stopSettle();
-        finishOnCloneOrArm();
+        finishOnClone();
         return;
       }
 
-      const duration = Math.min(480, Math.max(220, Math.abs(to - from) * 0.45));
+      const distance = Math.abs(to - from);
+      const duration = isPhone()
+        ? Math.min(920, Math.max(560, distance * 0.8))
+        : Math.min(480, Math.max(220, distance * 0.45));
       const started = performance.now();
       const ease = (t) => 1 - (1 - t) ** 3;
 
@@ -203,14 +210,14 @@
         }
         track.scrollLeft = to;
         stopSettle();
-        finishOnCloneOrArm();
+        finishOnClone();
       };
 
       settleFrame = requestAnimationFrame(step);
     };
 
     const goPhysical = (p, instant = false) => {
-      stopAutoplay();
+      armAutoplay();
       p = Math.max(0, Math.min(maxPhysical, p));
       if (instant) jumpTo(p);
       else settleTo(p);
@@ -219,12 +226,24 @@
     const onIdle = () => {
       if (busy()) return;
       syncFromScroll();
-      finishOnCloneOrArm();
+      finishOnClone();
+      if (!autoplayTimer) armAutoplay();
     };
 
     const queueIdle = () => {
       window.clearTimeout(idleTimer);
       idleTimer = window.setTimeout(onIdle, 140);
+    };
+
+    const settleFromGesture = (delta, originScroll) => {
+      const w = width();
+      const from = Math.round(originScroll / w);
+      const nearest = Math.round(track.scrollLeft / w);
+      const target = Math.max(
+        0,
+        Math.min(maxPhysical, Math.abs(delta) > w * 0.15 ? from + (delta < 0 ? 1 : -1) : nearest),
+      );
+      settleTo(target);
     };
 
     prev?.addEventListener("click", () => goPhysical(physical - 1));
@@ -244,11 +263,8 @@
     });
 
     track.addEventListener("pointerdown", (event) => {
-      stopAutoplay();
-      if (event.pointerType === "touch") {
-        touching = true;
-        return;
-      }
+      if (event.pointerType === "touch") return;
+      armAutoplay();
       stopSettle();
       dragging = true;
       startX = event.clientX;
@@ -259,41 +275,73 @@
 
     track.addEventListener(
       "touchstart",
-      () => {
+      (event) => {
+        const touch = event.touches[0];
+        if (!touch) return;
         touching = true;
-        stopAutoplay();
+        axis = null;
+        startX = touch.clientX;
+        startY = touch.clientY;
+        startScroll = track.scrollLeft;
+        stopSettle();
+        armAutoplay();
       },
       { passive: true },
     );
 
-    const endTouch = () => {
+    track.addEventListener(
+      "touchmove",
+      (event) => {
+        if (!touching || event.touches.length !== 1) return;
+        const touch = event.touches[0];
+        const dx = touch.clientX - startX;
+        const dy = touch.clientY - startY;
+        if (!axis) {
+          if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return;
+          axis = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
+          if (axis === "x") {
+            dragging = true;
+            track.classList.add("is-dragging");
+          }
+        }
+        if (axis !== "x") return;
+        event.preventDefault();
+        track.scrollLeft = startScroll - dx;
+      },
+      { passive: false },
+    );
+
+    const endTouch = (event) => {
       if (!touching) return;
+      const wasX = axis === "x";
+      const touch = event.changedTouches?.[0];
+      const delta = touch ? touch.clientX - startX : 0;
       touching = false;
-      queueIdle();
+      axis = null;
+      if (!wasX) {
+        queueIdle();
+        return;
+      }
+      dragging = false;
+      track.classList.add("is-settling");
+      track.classList.remove("is-dragging");
+      settleFromGesture(delta, startScroll);
     };
 
     window.addEventListener("touchend", endTouch, { passive: true });
     window.addEventListener("touchcancel", endTouch, { passive: true });
 
     track.addEventListener("pointermove", (event) => {
-      if (!dragging) return;
+      if (!dragging || touching) return;
       track.scrollLeft = startScroll - (event.clientX - startX);
     });
 
     const endDrag = (event) => {
-      if (!dragging) return;
+      if (!dragging || touching) return;
       dragging = false;
       track.classList.add("is-settling");
       track.classList.remove("is-dragging");
-      const w = width();
-      const delta = event.clientX - startX;
-      const from = Math.round(startScroll / w);
-      const nearest = Math.round(track.scrollLeft / w);
-      const target = Math.max(
-        0,
-        Math.min(maxPhysical, Math.abs(delta) > w * 0.15 ? from + (delta < 0 ? 1 : -1) : nearest),
-      );
-      settleTo(target);
+      settleFromGesture(event.clientX - startX, startScroll);
     };
 
     const endPointer = (event) => {
@@ -317,5 +365,6 @@
     }
 
     jumpTo(1);
+    armAutoplay();
   }
 })();
