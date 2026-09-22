@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/drawer/drawer.js"></script>
     <script>
       (() => {
         try {
@@ -36,12 +37,14 @@
 
     <header class="site-header">
       <div class="header-inner">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-open>
+          <span class="hamburger" aria-hidden="true"><span></span></span>
+        </button>
         <a class="wordmark" href="/" aria-label="Olyve home">
           <img class="logo logo-light" src="/olyve_logo.png" alt="Olyve" width="140" height="36" />
           <img class="logo logo-dark" src="/olyve_logo_dark.png" alt="Olyve" width="140" height="36" />
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
-        <nav>
+        <nav class="site-nav">
           <a href="/#overview">Product</a>
           <a href="/support">Support</a>
           <a href="https://axialmotion.com">Axial Motion</a>
@@ -49,6 +52,14 @@
         </nav>
       </div>
     </header>
+    <sl-drawer class="nav-drawer" label="Menu" placement="start" no-header data-nav-drawer>
+      <nav class="drawer-nav">
+        <a href="/#overview">Product</a>
+        <a href="/support">Support</a>
+        <a href="https://axialmotion.com">Axial Motion</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Dark</button>
+      </nav>
+    </sl-drawer>
 
     <section class="hero" aria-label="Olyve">
       <div class="hero-carousel" data-hero-carousel>
