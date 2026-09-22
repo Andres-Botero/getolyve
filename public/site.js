@@ -84,17 +84,21 @@
 
     let logical = 0;
     let physical = 1;
-    let timer = 0;
+    let autoplayTimer = 0;
+    let idleTimer = 0;
     let dragging = false;
     let jumping = false;
     let settling = false;
+    let touching = false;
     let settleFrame = 0;
     let startX = 0;
     let startScroll = 0;
-    let settleTimer = 0;
+    const AUTOPLAY_MS = 7000;
+    const canHover = window.matchMedia("(hover: hover)").matches;
 
     const width = () => track.clientWidth;
     const maxPhysical = count + 1;
+    const busy = () => dragging || jumping || settling || touching;
     const logicalOf = (p) => {
       if (p <= 0) return count - 1;
       if (p >= maxPhysical) return 0;
@@ -109,22 +113,52 @@
       });
     };
 
+    const stopAutoplay = () => {
+      window.clearTimeout(autoplayTimer);
+      autoplayTimer = 0;
+    };
+
+    const armAutoplay = () => {
+      stopAutoplay();
+      if (reduceMotion || busy() || document.hidden) return;
+      autoplayTimer = window.setTimeout(() => {
+        if (busy()) return;
+        goPhysical(physical + 1);
+      }, AUTOPLAY_MS);
+    };
+
+    const syncFromScroll = () => {
+      const w = width();
+      if (!w || jumping || settling) return;
+      physical = Math.round(track.scrollLeft / w);
+      logical = logicalOf(physical);
+      setDots();
+    };
+
     const jumpTo = (p) => {
       jumping = true;
       track.classList.add("is-jumping");
       physical = p;
       logical = logicalOf(p);
-      track.scrollTo({ left: p * width(), behavior: "auto" });
+      setDots();
+      const x = p * width();
+      const apply = () => track.scrollTo({ left: x, behavior: "auto" });
+      apply();
       requestAnimationFrame(() => {
-        track.scrollTo({ left: p * width(), behavior: "auto" });
-        track.classList.remove("is-jumping");
-        jumping = false;
+        apply();
+        requestAnimationFrame(() => {
+          apply();
+          track.classList.remove("is-jumping");
+          jumping = false;
+          armAutoplay();
+        });
       });
     };
 
-    const settleClones = () => {
+    const finishOnCloneOrArm = () => {
       if (physical === 0) jumpTo(count);
       else if (physical === maxPhysical) jumpTo(1);
+      else armAutoplay();
     };
 
     const stopSettle = () => {
@@ -137,7 +171,9 @@
     const settleTo = (p) => {
       if (settleFrame) cancelAnimationFrame(settleFrame);
       settleFrame = 0;
+      stopAutoplay();
 
+      p = Math.max(0, Math.min(maxPhysical, p));
       const w = width();
       const from = track.scrollLeft;
       const to = p * w;
@@ -150,7 +186,7 @@
       if (reduceMotion || Math.abs(to - from) < 1) {
         track.scrollTo({ left: to, behavior: "auto" });
         stopSettle();
-        settleClones();
+        finishOnCloneOrArm();
         return;
       }
 
@@ -167,81 +203,77 @@
         }
         track.scrollLeft = to;
         stopSettle();
-        settleClones();
+        finishOnCloneOrArm();
       };
 
       settleFrame = requestAnimationFrame(step);
     };
 
     const goPhysical = (p, instant = false) => {
-      if (p > maxPhysical) {
-        jumpTo(1);
-        p = 2;
-        instant = false;
-      } else if (p < 0) {
-        jumpTo(count);
-        p = count - 1;
-        instant = false;
-      }
-      physical = p;
-      logical = logicalOf(p);
-      setDots();
-      track.scrollTo({ left: p * width(), behavior: instant ? "auto" : "smooth" });
+      stopAutoplay();
+      p = Math.max(0, Math.min(maxPhysical, p));
+      if (instant) jumpTo(p);
+      else settleTo(p);
     };
 
-    const restart = () => {
-      window.clearInterval(timer);
-      if (reduceMotion) return;
-      timer = window.setInterval(() => goPhysical(physical + 1), 7000);
+    const onIdle = () => {
+      if (busy()) return;
+      syncFromScroll();
+      finishOnCloneOrArm();
     };
 
-    const sync = () => {
-      if (dragging || jumping || settling || !width()) return;
-      physical = Math.round(track.scrollLeft / width());
-      logical = logicalOf(physical);
-      setDots();
+    const queueIdle = () => {
+      window.clearTimeout(idleTimer);
+      idleTimer = window.setTimeout(onIdle, 140);
     };
 
-    prev?.addEventListener("click", () => {
-      goPhysical(physical - 1);
-      restart();
-    });
-    next?.addEventListener("click", () => {
-      goPhysical(physical + 1);
-      restart();
-    });
-    dots.forEach((dot, i) =>
-      dot.addEventListener("click", () => {
-        goPhysical(i + 1);
-        restart();
-      }),
-    );
+    prev?.addEventListener("click", () => goPhysical(physical - 1));
+    next?.addEventListener("click", () => goPhysical(physical + 1));
+    dots.forEach((dot, i) => dot.addEventListener("click", () => goPhysical(i + 1)));
 
     track.addEventListener(
       "scroll",
       () => {
-        requestAnimationFrame(sync);
-        window.clearTimeout(settleTimer);
-        settleTimer = window.setTimeout(() => {
-          if (!dragging && !jumping && !settling) settleClones();
-        }, 80);
+        requestAnimationFrame(syncFromScroll);
+        if (!busy()) queueIdle();
       },
       { passive: true },
     );
     track.addEventListener("scrollend", () => {
-      if (!dragging && !jumping && !settling) settleClones();
+      if (!busy()) onIdle();
     });
 
     track.addEventListener("pointerdown", (event) => {
-      if (event.pointerType === "touch") return;
+      stopAutoplay();
+      if (event.pointerType === "touch") {
+        touching = true;
+        return;
+      }
       stopSettle();
       dragging = true;
       startX = event.clientX;
       startScroll = track.scrollLeft;
       track.classList.add("is-dragging");
       track.setPointerCapture(event.pointerId);
-      window.clearInterval(timer);
     });
+
+    track.addEventListener(
+      "touchstart",
+      () => {
+        touching = true;
+        stopAutoplay();
+      },
+      { passive: true },
+    );
+
+    const endTouch = () => {
+      if (!touching) return;
+      touching = false;
+      queueIdle();
+    };
+
+    window.addEventListener("touchend", endTouch, { passive: true });
+    window.addEventListener("touchcancel", endTouch, { passive: true });
 
     track.addEventListener("pointermove", (event) => {
       if (!dragging) return;
@@ -262,19 +294,28 @@
         Math.min(maxPhysical, Math.abs(delta) > w * 0.15 ? from + (delta < 0 ? 1 : -1) : nearest),
       );
       settleTo(target);
-      restart();
     };
 
-    track.addEventListener("pointerup", endDrag);
-    track.addEventListener("pointercancel", endDrag);
+    const endPointer = (event) => {
+      if (event.pointerType === "touch") return;
+      endDrag(event);
+    };
+
+    window.addEventListener("pointerup", endPointer);
+    window.addEventListener("pointercancel", endPointer);
     window.addEventListener("resize", () => jumpTo(logical + 1));
-    carousel.addEventListener("mouseenter", () => window.clearInterval(timer));
-    carousel.addEventListener("mouseleave", restart);
-    carousel.addEventListener("focusin", () => window.clearInterval(timer));
-    carousel.addEventListener("focusout", restart);
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stopAutoplay();
+      else if (!busy()) armAutoplay();
+    });
+
+    if (canHover) {
+      carousel.addEventListener("mouseenter", stopAutoplay);
+      carousel.addEventListener("mouseleave", () => {
+        if (!busy()) armAutoplay();
+      });
+    }
 
     jumpTo(1);
-    setDots();
-    restart();
   }
 })();
