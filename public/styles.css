@@ -678,6 +678,22 @@ a.card:hover {
 .prose h2 { margin-top: 1.6em; }
 .updated { color: var(--muted); font-size: 14px; }
 
+.card-brands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-brands li {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
 .site-footer {
   display: flex;
   flex-wrap: wrap;

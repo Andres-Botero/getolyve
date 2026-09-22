@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Billing — Olyve</title>
+    <meta
+      name="description"
+      content="Olyve usage is billed in USD by Axial Motion. Payments are processed by Stripe. Digital delivery. Refunds and cancellation are on this site."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/drawer/drawer.js"></script>
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="header-inner">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-open>
+          <span class="hamburger" aria-hidden="true"><span></span></span>
+        </button>
+        <a class="wordmark" href="/" aria-label="Olyve home">
+          <img class="logo logo-light" src="/olyve_logo.png" alt="Olyve" width="140" height="36" />
+          <img class="logo logo-dark" src="/olyve_logo_dark.png" alt="Olyve" width="140" height="36" />
+        </a>
+        <nav class="site-nav">
+          <a href="/#overview">Product</a>
+          <a href="/support">Support</a>
+          <a href="https://axialmotion.com">Axial Motion</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Dark</button>
+        </nav>
+      </div>
+    </header>
+    <sl-drawer class="nav-drawer" label="Menu" placement="start" no-header data-nav-drawer>
+      <nav class="drawer-nav">
+        <a href="/#overview">Product</a>
+        <a href="/support">Support</a>
+        <a href="https://axialmotion.com">Axial Motion</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Dark</button>
+      </nav>
+    </sl-drawer>
+    <main class="prose">
+      <p class="eyebrow">Billing</p>
+      <h1>What you pay for</h1>
+      <p class="updated">Effective September 22, 2026.</p>
+      <p>
+        Olyve is operations software for service businesses: clients, visits,
+        estimates, invoices, and inbox. Charges on this site are for
+        <strong>Olyve usage</strong> — a subscription or a usage-based fee, as
+        shown before you pay.
+      </p>
+      <p>
+        Olyve is a product of <strong>Axial Motion</strong>. Axial Motion is
+        the company that operates the app, receives the payment, and holds the
+        bank account. The name on your card or bank statement will include
+        Axial Motion.
+      </p>
+
+      <h2>Currency and prices</h2>
+      <p>
+        Prices are in <strong>United States dollars (USD)</strong>. The amount
+        you will pay is shown before you confirm. Private beta may be free.
+        When a paid plan is offered, it is labeled at checkout or in the app
+        store listing. We are not running a promotion, trial discount, or
+        coupon on this page.
+      </p>
+
+      <h2>How you pay</h2>
+      <p>
+        Web and in-app card payments are processed by
+        <a href="https://stripe.com">Stripe</a> on behalf of Axial Motion. We
+        do not store full card numbers. Payment data is handled under Stripe’s
+        PCI DSS compliance. This website and checkout use HTTPS.
+      </p>
+      <p>
+        If you buy through the Apple App Store or Google Play, Apple or Google
+        charges you. Those purchases follow the store’s billing rules.
+      </p>
+      <p>Cards commonly accepted through Stripe include:</p>
+      <ul class="card-brands">
+        <li>Visa</li>
+        <li>Mastercard</li>
+        <li>American Express</li>
+        <li>Discover</li>
+      </ul>
+
+      <h2>Delivery</h2>
+      <p>
+        Olyve is digital software. After a successful payment, access is
+        delivered online — usually immediately — to the account you used.
+        There is no physical shipment, no shipping fee, and no delivery
+        address.
+      </p>
+
+      <h2>Who can buy</h2>
+      <p>
+        Olyve is for businesses. You must be old enough to form a contract
+        where you live. We do not sell to people or organizations we are
+        prohibited from serving under United States law, including applicable
+        sanctions.
+      </p>
+
+      <h2>Company</h2>
+      <p>
+        Axial Motion<br />
+        Software studio, United States<br />
+        Product: Olyve<br />
+        Studio: <a href="https://axialmotion.com">axialmotion.com</a>
+      </p>
+
+      <h2>Policies</h2>
+      <ul>
+        <li><a href="/refunds">Refunds, returns, and cancellation</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/support">Customer support</a></li>
+      </ul>
+    </main>
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Axial Motion. Olyve is a product of Axial Motion.</p>
+      <div class="footer-links">
+        <a href="/billing">Billing</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/refunds">Refunds</a>
+        <a href="/support">Support</a>
+        <a href="/delete-account">Delete account</a>
+      </div>
+    </footer>
+    <script src="/site.js"></script>
+  </body>
+</html>

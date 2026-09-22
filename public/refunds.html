@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Refunds and cancellation — Olyve</title>
+    <meta
+      name="description"
+      content="Refund, return, and subscription cancellation policy for Olyve, operated by Axial Motion."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/drawer/drawer.js"></script>
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="header-inner">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-open>
+          <span class="hamburger" aria-hidden="true"><span></span></span>
+        </button>
+        <a class="wordmark" href="/" aria-label="Olyve home">
+          <img class="logo logo-light" src="/olyve_logo.png" alt="Olyve" width="140" height="36" />
+          <img class="logo logo-dark" src="/olyve_logo_dark.png" alt="Olyve" width="140" height="36" />
+        </a>
+        <nav class="site-nav">
+          <a href="/#overview">Product</a>
+          <a href="/support">Support</a>
+          <a href="https://axialmotion.com">Axial Motion</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Dark</button>
+        </nav>
+      </div>
+    </header>
+    <sl-drawer class="nav-drawer" label="Menu" placement="start" no-header data-nav-drawer>
+      <nav class="drawer-nav">
+        <a href="/#overview">Product</a>
+        <a href="/support">Support</a>
+        <a href="https://axialmotion.com">Axial Motion</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Dark</button>
+      </nav>
+    </sl-drawer>
+    <main class="prose">
+      <p class="eyebrow">Legal</p>
+      <h1>Refunds, returns, and cancellation</h1>
+      <p class="updated">Effective September 22, 2026.</p>
+      <p>
+        This is the refund, return, and cancellation policy for Olyve.
+        Olyve is operated by <strong>Axial Motion</strong>. Axial Motion
+        receives the payment and is the name on the bank account and on your
+        card statement. Studio site:
+        <a href="https://axialmotion.com">axialmotion.com</a>.
+      </p>
+
+      <h2>Returns</h2>
+      <p>
+        Olyve is digital software. There is nothing to ship back and no
+        in-store return. If you want your money back, request a refund.
+      </p>
+
+      <h2>Refunds for Stripe and web payments</h2>
+      <p>
+        If you paid Axial Motion through Stripe or another web checkout, you
+        may request a full refund within <strong>14 days</strong> of the
+        charge if you have not made substantial use of Olyve (for example,
+        you have not issued invoices to customers).
+      </p>
+      <p>
+        After 14 days, or after substantial use, refunds are at our
+        discretion. We will refund a charge that was clearly a duplicate, an
+        error, or billed after you had already cancelled.
+      </p>
+      <p>There is no restocking or refund fee. We refund the amount you paid.</p>
+      <p>
+        Approved refunds are returned to the original payment method. Banks
+        typically post them in 5–10 business days.
+      </p>
+
+      <h2>How to request a refund</h2>
+      <ol>
+        <li>
+          Email
+          <a href="mailto:andres@axialmotion.com?subject=Olyve%20refund%20request">andres@axialmotion.com</a>
+          from the address on the purchase or Olyve account.
+        </li>
+        <li>Write “Olyve refund request” in the subject line.</li>
+        <li>Include the date of the charge and why you are asking.</li>
+      </ol>
+      <p>We aim to reply within two business days.</p>
+
+      <h2>App Store and Google Play</h2>
+      <p>
+        Purchases billed by Apple or Google must be refunded by Apple or
+        Google. Use the store’s refund request flow, or write to us and we
+        will point you to it.
+      </p>
+
+      <h2>Cancellation</h2>
+      <p>
+        You may cancel a subscription at any time. Cancellation stops future
+        renewals. You keep access through the end of the period you already
+        paid. We do not prorate unused days unless a refund is approved
+        under this policy.
+      </p>
+      <p>
+        Cancel in the app’s billing settings when that control is available,
+        or email
+        <a href="mailto:andres@axialmotion.com?subject=Cancel%20Olyve%20subscription">andres@axialmotion.com</a>.
+        If you subscribed through the App Store or Google Play, cancel in
+        your Apple or Google account settings.
+      </p>
+
+      <h2>Related pages</h2>
+      <ul>
+        <li><a href="/support">Support</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/billing">Billing</a></li>
+      </ul>
+    </main>
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Axial Motion</p>
+      <div class="footer-links">
+        <a href="/billing">Billing</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/refunds">Refunds</a>
+        <a href="/support">Support</a>
+        <a href="/delete-account">Delete account</a>
+      </div>
+    </footer>
+    <script src="/site.js"></script>
+  </body>
+</html>
