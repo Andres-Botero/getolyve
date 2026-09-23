@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payments — Olyve guide</title>
+    <meta name="description" content="Record cash, check, Zelle, or a bank transfer against an invoice or a visit." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/docs.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/drawer/drawer.js"></script>
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="docs-body">
+    <div class="page-bg" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="header-inner">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-open>
+          <span class="hamburger" aria-hidden="true"><span></span></span>
+        </button>
+        <a class="wordmark" href="/" aria-label="Olyve home">
+          <img class="logo logo-light" src="/olyve_logo.png" alt="Olyve" width="140" height="36" />
+          <img class="logo logo-dark" src="/olyve_logo_dark.png" alt="Olyve" width="140" height="36" />
+        </a>
+        <nav class="site-nav">
+          <a href="/#overview">Product</a>
+          <a class="is-current" href="/docs">Guide</a>
+          <a href="/support">Support</a>
+          <a href="https://axialmotion.com">Axial Motion</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Dark</button>
+        </nav>
+      </div>
+    </header>
+    <sl-drawer class="nav-drawer" label="Menu" placement="start" no-header data-nav-drawer>
+      <nav class="drawer-nav">
+        <a href="/#overview">Product</a>
+        <a class="is-current" href="/docs">Guide</a>
+        <a href="/support">Support</a>
+        <a href="https://axialmotion.com">Axial Motion</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Dark</button>
+      </nav>
+    </sl-drawer>
+    
+    <div class="docs-shell">
+      <button class="docs-menu-btn" type="button" data-docs-menu aria-expanded="false">Guide pages</button>
+      <aside class="docs-nav" data-docs-nav>
+<input class="docs-search" type="search" placeholder="Search the guide" aria-label="Search the guide" data-docs-search />
+<div class="docs-nav-group" data-docs-group>
+<p class="docs-nav-label">Account</p>
+<a href="/docs/my-account" data-search="My account Profile photo, business details, review links, and where account tools live. profile avatar information logout business address">My account</a>
+<a href="/docs/settings" data-search="Settings Dark mode, English or Spanish, and the shortcut to billing. dark mode language spanish english appearance">Settings</a>
+<a href="/docs/billing" data-search="Billing and plans The trial, Starter, Professional, and Business, plus cards and receipts. stripe subscription trial starter professional business yearly monthly cancel">Billing and plans</a>
+</div>
+<div class="docs-nav-group" data-docs-group>
+<p class="docs-nav-label">Communication</p>
+<a href="/docs/inbox" data-search="Inbox Notifications and messages in one place, with an unread count on Home. notifications messages unread mark all read">Inbox</a>
+<a href="/docs/chat" data-search="Chat Start a thread, reply, and message a client who has joined Olyve. message conversation new send thread">Chat</a>
+</div>
+<div class="docs-nav-group" data-docs-group>
+<p class="docs-nav-label">The work</p>
+<a href="/docs/clients" data-search="Client management Add people or companies, import a list, invite them, and attach services. clients import csv contacts paste invite company person">Client management</a>
+<a href="/docs/services" data-search="My services Your price list — name, description, and a default price you can override per client. price list lawn service add delete default price">My services</a>
+<a href="/docs/calendar" data-search="Calendar The week of visits, plus reschedule, cancel, complete, and reopen from the day. schedule reschedule cancel complete day week">Calendar</a>
+<a href="/docs/visits" data-search="Visits What a visit record holds, and the path from scheduled to paid. scheduled completed cancelled skipped invoiced paid status">Visits</a>
+<a href="/docs/visit-actions" data-search="Visit actions Complete, invoice, record a payment, edit the price, request a review, or change status. mark complete create invoice record payment edit price update status notes">Visit actions</a>
+<a href="/docs/visit-history" data-search="Visit history The timeline on a visit — created, completed, invoiced, and paid. timeline history events notes invoice payment">Visit history</a>
+</div>
+<div class="docs-nav-group" data-docs-group>
+<p class="docs-nav-label">Money</p>
+<a href="/docs/invoices" data-search="Invoices How an invoice is created from a visit or from scratch, and what the document contains. invoice unpaid paid tax preview create">Invoices</a>
+<a class="is-current" href="/docs/payments" data-search="Payments Record cash, check, Zelle, or a bank transfer against an invoice or a visit. cash check zelle bank transfer mark as paid record payment">Payments</a>
+<a href="/docs/invoice-pdf" data-search="Downloadable PDF invoice Preview the invoice PDF in the app and save Invoice_number.pdf. pdf download preview share print">Downloadable PDF invoice</a>
+<a href="/docs/my-invoices" data-search="My invoices Search, filter by date, and page through every invoice you have issued. list unpaid paid filter search date remaining">My invoices</a>
+<a href="/docs/my-payments" data-search="My payments Every payment you have recorded, with method, source, and a date filter. payments list cash check zelle from invoice direct">My payments</a>
+<a href="/docs/reports" data-search="My reports Collected, invoiced, what is still open, and who to follow up with. collected outstanding unbilled aging this week this month">My reports</a>
+<a href="/docs/estimates" data-search="My estimates Quote one-time or recurring work, with tax and a valid-until date. quote estimate recurring weekly tax valid until">My estimates</a>
+</div>
+<div class="docs-nav-group" data-docs-group>
+<p class="docs-nav-label">Growth</p>
+<a href="/docs/request-a-review" data-search="Request a review Share a Google, Yelp, or website link, or send it in Olyve after a visit. google yelp review share copy message">Request a review</a>
+</div>
+<p class="docs-search-empty" data-docs-empty>No pages match that search.</p>
+</aside>
+      <article class="docs-article">
+        <p class="docs-kicker">Money</p>
+        <h1>Payments</h1>
+        <p class="docs-lede">Record cash, check, Zelle, or a bank transfer against an invoice or a visit.</p>
+        <p>Olyve records the payments your customers make to you. It does not charge their card. Card checkout in the app is only for your own Olyve subscription. See <a href="/docs/billing">Billing and plans</a>.</p>
+<p>The full list is <a href="/docs/my-payments">My payments</a>. This page is how a payment gets recorded.</p>
+<h2 id="ways-to-record-one">Ways to record one</h2>
+<p><strong>On an unpaid invoice.</strong> Open the invoice, or use <strong>Mark as Paid</strong> on My Invoices or on the visit. Olyve loads what is still due. Enter the amount, the date, and the method.</p>
+<p><strong>On a completed visit with no invoice.</strong> <strong>Record Payment</strong> on the visit writes a direct payment against that stop. Use this when you collected money without issuing a bill. Starter plans can record these payments even though they cannot create invoices.</p>
+<p>You cannot record either kind while the visit is still scheduled.</p>
+<h2 id="methods">Methods</h2>
+<ul>
+<li>Cash</li>
+<li>Check</li>
+<li>Zelle</li>
+<li>Bank transfer</li>
+</ul>
+<p>Add a note if you need to remember a check number or who handed you the cash. That note shows on the payment and in visit history.</p>
+<h2 id="what-changes-after-you-save">What changes after you save</h2>
+<p>The payment appears in My Payments, labeled <strong>From Invoice</strong> or <strong>Direct Payment</strong>. An invoice payment reduces the remaining balance. When the balance hits zero, the invoice becomes Paid and the visit display status becomes Paid. Status edits on that visit lock.</p>
+<p>Open the payment for its number, amount, method, date, client, and the invoice or visit it belongs to.</p>
+        <nav class="docs-pager" aria-label="Guide pages">
+<a href="/docs/invoices"><small>Previous</small><strong>Invoices</strong></a>
+<a class="is-next" href="/docs/invoice-pdf"><small>Next</small><strong>Downloadable PDF invoice</strong></a>
+</nav>
+      </article>
+      <aside class="docs-toc"><p class="docs-toc-label">On this page</p><a href="#ways-to-record-one">Ways to record one</a>
+<a href="#methods">Methods</a>
+<a href="#what-changes-after-you-save">What changes after you save</a></aside>
+    </div>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Axial Motion. Olyve is a product of Axial Motion.</p>
+      <div class="footer-links">
+        <a href="/docs">Guide</a>
+        <a href="/billing">Billing</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/refunds">Refunds</a>
+        <a href="/support">Support</a>
+        <a href="/delete-account">Delete account</a>
+      </div>
+    </footer>
+    <script src="/site.js"></script>
+    <script src="/docs.js"></script>
+  </body>
+</html>
