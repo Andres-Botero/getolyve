@@ -1,24 +1,26 @@
 ---
-title: Visit history
-description: The timeline on a visit — created, completed, invoiced, and paid.
+title: Read the visit timeline
+description: See when a visit was scheduled, completed, invoiced, updated, and paid.
 section: The work
 order: 6
 search: timeline history events notes invoice payment
 ---
 
-Every visit keeps a history tab. It is the permanent record of what happened on that stop, newest first. Clients can look back at the same story for their own visits: what was scheduled, what was completed, and whether it was billed.
+Open a visit and tap **History** for a dated timeline, with the newest activity first. Both you and the client can use it to answer “What happened with this visit?”
 
-## Events you will see
+## What appears in the timeline
 
-- **Created** — the visit was scheduled, dated from when it was added.
-- **Status changed** — the status moved off scheduled, for example to skipped or cancelled.
-- **Completed** — you marked the visit complete, dated from the completion time.
-- **Invoice created** — an invoice number and total, once you generate one.
-- **Payment received** — the amount and method (cash, check, Zelle, or bank transfer). If you typed a note on the payment, that note is the description.
-- **Notes** — when notes were added or changed after the visit was created.
+- **Created** — the visit was first scheduled.
+- **Status Changed** — the visit moved to another status.
+- **Completed** — the work was marked complete.
+- **Invoice Created** — an invoice was issued, with its number and amount.
+- **Payment Received** — a payment was recorded, with its amount and method.
+- **Notes Updated** — someone changed the visit notes.
 
-If nothing beyond the schedule has happened, the created event is still there. An empty history message only appears when there is genuinely nothing to list.
+The Created event is always there, even when nothing else has happened. A completed visit may show both Status Changed and Completed because one records the status update and the other records the completion time.
 
-## How this relates to invoices
+If a payment has a note—for example, a check number—that note appears in its timeline entry. For privacy and readability, the Notes Updated entry records that notes changed but does not repeat the note itself.
 
-The invoice itself has a history tab too: issued, and then each payment. Visit history is about the stop. Invoice history is about the bill. They link to each other, and they are not the same list. See [Invoices](/docs/invoices).
+## Visit history and invoice history
+
+The visit timeline tells the story of the work. The invoice's **History** tab tells the story of the bill, including payments applied to it. Use the visit when you are answering a service question and the invoice when you are answering a balance question.

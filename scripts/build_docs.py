@@ -134,7 +134,7 @@ def load_pages() -> list[dict]:
 
 
 def chrome(title: str, description: str, body: str) -> str:
-    full_title = "User guide — Olyve" if title == "User guide" else f"{title} — Olyve guide"
+    full_title = "Olyve Help Center" if title == "Olyve Help Center" else f"{title} — Olyve Help Center"
     return f"""<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -290,7 +290,7 @@ def pager_html(pages: list[dict], index: int) -> str:
             f'<a href="{href(prev_page["slug"])}"><small>Previous</small><strong>{html.escape(prev_page["title"])}</strong></a>'
         )
     else:
-        parts.append('<a href="/docs"><small>Previous</small><strong>User guide</strong></a>')
+        parts.append('<a href="/docs"><small>Previous</small><strong>Olyve Help Center</strong></a>')
     if article_index < len(articles) - 1:
         next_page = articles[article_index + 1]
         parts.append(

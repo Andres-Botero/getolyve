@@ -1,46 +1,49 @@
 ---
-title: Visit actions
-description: Complete, invoice, record a payment, edit the price, request a review, or change status.
+title: Complete and bill a visit
+description: Finish the work, add notes, create the invoice, and record payment.
 section: The work
 order: 5
 search: mark complete create invoice record payment edit price update status notes
 ---
 
-Open a visit and use **Actions**. The subtitle on that tab is “Manage this visit and related documents.” The same ideas show up as buttons on the calendar day: Mark Complete, Reschedule, and Cancel.
+Most jobs follow the same simple path: complete the visit, then create an invoice or record the money you collected.
 
-## Mark complete
+## Mark the work complete
 
-**Mark Visit as Complete** shows the service, the client when you are on the calendar, and the date. Notes are optional. Confirming sets the status to completed. That is the gate for billing.
+From the calendar, tap **Mark Complete** on the visit. Or open the visit, choose **Actions**, tap **Update Status**, then choose **Completed**.
 
-## Create invoice
+The **Mark Visit as Complete** sheet shows the service and date. Add a note if you want the client to have a record of what was done, then tap **Mark Complete**.
 
-Available after the visit is complete, and only if it does not already have an invoice. Olyve loads a preview built from the visit — client, service, and price — and you confirm it. You are not filling a blank invoice from scratch for that stop.
+> Complete the visit before billing it. Invoice and payment actions stay unavailable while the visit is Scheduled.
 
-After the invoice exists, the action becomes **View Invoice**.
+## Create an invoice
 
-Invoices are on Professional and Business. Starter can still record a payment without an invoice.
+1. Open the completed visit.
+2. Choose **Actions**.
+3. Tap **Create Invoice**. On the calendar, the same action is called **Generate Invoice**.
+4. Review the client, service, date, and price.
+5. Confirm the invoice.
 
-## Record a payment
+The button becomes **View Invoice** after the invoice is created, so the same visit cannot be billed twice. Invoices are included with Professional and Business.
 
-Two paths:
+## Record an invoice payment
 
-- **Mark as Paid** appears when the visit has an unpaid invoice. It records a payment against that invoice number.
-- **Record Payment** appears when the visit is complete, still owes money, and does not have an invoice yet. Use this for cash, check, Zelle, or a bank transfer collected without a PDF.
+If the invoice is still open, tap **Mark as Paid**. Confirm the amount, payment date, and method. Olyve applies the payment to that invoice and updates the remaining balance.
 
-Both stay disabled while the visit is scheduled.
+## Record payment without an invoice
 
-## Edit visit price
+If you collected cash, a check, Zelle, or a bank transfer and do not need an invoice, tap **Record Payment** on the completed visit. Olyve saves it as a direct payment connected to the visit.
 
-Only while the visit is scheduled, and only when it is tied to a client and a client service. The button shows the current price. Changing it updates what the later invoice will use.
+Starter can record direct payments even though invoices are not part of that plan.
 
-## Request review
+If neither billing action appears on the calendar, check the schedule's **Payment Frequency**. Payment may not be due on this visit.
 
-**Request Review** turns on once the visit is complete, invoiced, or paid. It opens the review screen with that client already selected. Before that, the button explains it is available once the visit is complete, invoiced, or paid. See [Request a review](/docs/request-a-review).
+## Fix a status or note
 
-## Update status
+**Update Status** lets you choose Scheduled, Completed, or Cancelled. Choose Scheduled to reopen completed work that has not been invoiced. Once an invoice or payment exists, the status is locked.
 
-**Update Status** can move a visit among scheduled, completed, skipped, and cancelled, including putting a completed visit back to scheduled when it has not been invoiced. After the visit is invoiced, the status is locked. After it is paid, it stays locked.
+Use **Edit Notes** whenever you need to correct or add visit notes.
 
-## Edit notes
+## Ask for a review
 
-**Edit Notes** is available on the visit regardless of status. Notes also appear on the visit summary and can show up in [Visit history](/docs/visit-history).
+**Request Review** becomes available after the visit is completed, invoiced, or paid. It opens with the client already selected. See [Ask for a review](/docs/request-a-review).

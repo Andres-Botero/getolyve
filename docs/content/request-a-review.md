@@ -1,23 +1,32 @@
 ---
-title: Request a review
-description: Share a Google, Yelp, or website link, or send it in Olyve after a visit.
+title: Ask for a review
+description: Send a personal request with your Google, Yelp, or website link.
 section: Growth
 order: 1
 search: google yelp review share copy message
 ---
 
-**Request a Review** is the Home card for asking a client to review the business. You can also open it from a visit once that visit is complete, invoiced, or paid. In that case the client is already selected.
+Open **Request a Review** from Home. You can also use **Request Review** on a completed, invoiced, or paid visit; Olyve selects that client for you.
 
 ## Before you send
 
-Save a review message and at least one link under My Information: Google, Yelp, or website. The message can use `{name}` for the client and `{business}` for your business. If no link is saved, the screen says so and offers **Add review links**, which opens My Information. Share stays disabled until a link exists. See [My account](/docs/my-account).
+From Home, tap your photo → **My Information**. Under **Reviews**:
+
+1. Write the message you want clients to receive.
+2. Use `{name}` for the client's name and `{business}` for your business name.
+3. Add at least one Google, Yelp, or website link.
+4. Tap **Save**.
+
+If you leave the message blank, Olyve uses a polite default thank-you. A link is still required. The review screen offers **Add review links** if none are saved.
 
 ## Pick a client
 
-Search the client list. Each row shows **On Olyve** or **No account**. Tap one to see the message preview with their name filled in.
+Search for the client and tap their name. Olyve fills the saved placeholders and shows a preview. The label beside the name tells you whether they are **On Olyve**.
 
 ## Two ways to send
 
-**Share or copy** opens the phone share sheet: WhatsApp, Messages, Mail, or copy the text. This works whether or not the client has an Olyve account. It is the right path for most clients.
+**Share or copy** opens your phone's share sheet. Choose Messages, WhatsApp, Mail, or copy the text. This works for every client and lets you choose the best way to reach them.
 
-**Send in Olyve** posts the same message into [Chat](/docs/chat). It is available only when that client is **On Olyve**. If they have no account, the button explains that, and you use share instead.
+**Send in Olyve** adds the request to your conversation with that client. It is available only when the client is **On Olyve**.
+
+> The best time to ask is soon after a completed visit, while the work is still fresh.

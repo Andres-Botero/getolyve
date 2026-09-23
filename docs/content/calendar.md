@@ -1,39 +1,54 @@
 ---
-title: Calendar
-description: The week of visits, plus reschedule, cancel, complete, and reopen from the day.
+title: Schedule work
+description: Add one-time or recurring work and manage the day from your calendar.
 section: The work
 order: 3
 search: schedule reschedule cancel complete day week
 ---
 
-**My Calendar** is the Calendar tab, and also a card on Home. Clients see the same idea as **My Schedule**: the visits that belong to them.
+Tap **Calendar** in the bottom menu to see the work ahead. Choose a day to see its visits and their status. Tap any visit for its full details and history.
 
-A day shows the visits on it, with enough status to see what is still scheduled and what is already done. Open a visit for the full record. See [Visits](/docs/visits).
+## Schedule from the calendar
 
-## Put a visit on the week
+1. Open **My Calendar**.
+2. Tap **Schedule Service**.
+3. Choose a client and service.
+4. Confirm the price.
+5. Choose **One-Time** or **Recurring**.
+6. Fill in the schedule and tap **Save**.
 
-Scheduling starts from a service already attached to a client. Choose one-time or recurring.
+If the service is not on that client yet, Olyve adds it as part of scheduling.
 
-Recurring frequencies:
+## Schedule from a client
 
-- Weekly
-- Biweekly
+Open the client, find the service, and tap **Schedule**. Use **Edit Schedule** later to change it.
+
+For a one-time visit, choose the date and optionally a time and notes. Recurring work can repeat:
+
+- Weekly or biweekly on a chosen day
 - Monthly
-- Every 2 months
-- Every 3 months
+- Every 2 or 3 months
 - Twice a year
 - Yearly
 
-Weekly and biweekly ask for a day of the week. Recurring schedules need a start date. One-time needs a date. You can also set an end date and, for weekly, biweekly, or monthly work, a payment frequency.
+Set a start date and, if the work will end, an optional end date.
 
-## Actions on a scheduled visit
+## Choose when payment is due
 
-From the day, a scheduled visit can be:
+Weekly, biweekly, and monthly schedules can use **Payment Frequency**. Choose every visit, or every 2, 3, or 4 visits.
 
-- **Mark Complete** — opens the complete sheet, with optional notes. See [Visit actions](/docs/visit-actions).
-- **Reschedule** — pick a new date. If the current date is in the past, the picker starts at today.
-- **Cancel** — asks you to confirm, then sets the visit to cancelled. Cancelled visits drop out of the active count on Home.
+This setting controls when Olyve offers **Generate Invoice** or **Mark as Paid** on the calendar. On visits where payment is not due, Olyve shows the next payment date instead.
 
-## After it is complete
+## Manage the day
 
-A completed visit that has not been invoiced can be **reopened**, which puts it back to scheduled. Once the visit has an invoice, reopen is no longer offered from the calendar. Invoicing and payment from a completed visit are covered in [Visit actions](/docs/visit-actions).
+A scheduled visit has three quick actions:
+
+- **Mark Complete** records that the work is done and lets you add notes.
+- **Reschedule** moves it to another date. Past visits can only move to today or later.
+- **Cancel** removes it from the active schedule after you confirm.
+
+After completion, the calendar may show **Generate Invoice**, **Mark as Paid**, **View Invoice**, or **View Payment**, depending on how that service is billed.
+
+If you completed a visit by mistake, tap **Reopen** before it is invoiced. This returns it to Scheduled. Once an invoice exists, the visit can no longer be reopened.
+
+Clients see their visits from **My Schedule** on Home. They can open details and history, but cannot schedule, complete, invoice, or edit your work.

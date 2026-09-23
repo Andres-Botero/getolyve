@@ -1,37 +1,41 @@
 ---
-title: User guide
-description: How Olyve is organized, and where to go for each part of the job.
+title: Olyve Help Center
+description: Straightforward help for setting up clients, scheduling work, getting paid, and staying in touch.
 section: Start here
 order: 0
 search: home tabs search clients calendar services invoices
 ---
 
-Olyve is the book for a home-service week: who you serve, when you go, what you did, and whether it has been billed. This guide follows the app the way it is laid out on Home.
+Welcome. Choose what you are trying to do below, or use **Search the guide** to find an answer.
 
 {{directory}}
 
-## How the app is organized
+## New to Olyve?
 
-The profile photo in the top left opens **My Account**. Search in the top right looks across clients, invoices, estimates, and payments.
+Start with [Set up Olyve](/docs/getting-started). It takes you from a new account to your first completed and paid visit.
 
-The bottom tabs are **Home**, **Calendar**, and **Clients**. Services stay one tap away from Home, under **My Services**.
+If your service provider sent you an invite code, use [Join Olyve as a client](/docs/join-as-a-client) instead. Client accounts are free.
 
-On Home, a service provider sees three groups of cards:
+## The everyday workflow
 
-- **Work:** Inbox, My Clients, My Services, My Calendar
-- **Money:** My Invoices, My Payments, My Reports, My Estimates
-- **Growth:** Request a Review
+For most service businesses, the day follows this order:
 
-A client who joins with an invite sees **Inbox** and **My Schedule**. Client accounts are free. You pay for Olyve; your customers pay you for the work.
+1. [Add a client](/docs/clients).
+2. [Create a service and set the price](/docs/services).
+3. [Schedule the work](/docs/calendar).
+4. [Mark the visit complete](/docs/visit-actions).
+5. Create an invoice or record payment.
+6. [Ask for a review](/docs/request-a-review).
 
-## A visit is the center
+Olyve keeps each step connected, so you can open a visit later and see the notes, invoice, payment, and history in one place.
 
-The usual path is: add a client, attach a service, put a visit on the calendar, mark it complete, then invoice it or record the payment. After a visit is invoiced, the action changes from Create Invoice to View Invoice. After it is paid, the visit status stays locked.
+## Find your way around
 
-## Plans
+- Tap your photo at the top left of Home for account, business, plan, and settings.
+- Tap the search icon at the top right to find clients, invoices, estimates, and payments.
+- Use **Home**, **Calendar**, and **Clients** in the bottom menu for daily work.
+- Open **My Services**, **My Invoices**, **My Payments**, **My Reports**, and **My Estimates** from Home.
 
-New provider accounts start on a 14-day Professional trial. Starter covers a solo route. Professional adds invoices, estimates, PDFs, the client portal, messaging, and reports. Business adds priority support. See [Billing and plans](/docs/billing).
+## Need a person?
 
-## Language
-
-The app is in English or Spanish. Change it in [Settings](/docs/settings). This guide is in English.
+Email [support@axialmotion.com](mailto:support@axialmotion.com) or visit [Olyve Support](/support). Include the email on your account, whether you use iPhone or Android, and a short description of what happened.

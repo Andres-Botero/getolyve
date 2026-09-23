@@ -1,21 +1,23 @@
 ---
-title: Inbox
-description: Notifications and messages in one place, with an unread count on Home.
+title: Use your Inbox
+description: Read visit and payment updates, clear notifications, and open conversations.
 section: Communication
 order: 1
 search: notifications messages unread mark all read
 ---
 
-**Inbox** is on Home for both service providers and clients. If anything is unread, Home also shows a card with the count, split between notifications and messages. The Inbox card badge uses the same total.
+Open **Inbox** from Home. The badge counts everything you have not read. When something new arrives while you are using Olyve, a banner may appear at the top; tap it to open the related visit, invoice, or conversation.
 
 ## Two tabs
 
-**Notifications** is the activity feed. Visit, invoice, and payment updates land here. An empty inbox says notifications will show up once that work starts. Open an item to mark it read. **Mark all read** clears the notification badge.
+**Notifications** contains updates about scheduled, completed, cancelled, or rescheduled visits, along with invoices and payments. Tap one to open the related item and mark it read. Tap **Mark all** to clear every unread notification.
 
-**Messages** is the list of conversations. Each row is a thread with a person. An empty list tells you to tap **New**. Unread threads count toward the badge on the Messages tab.
+**Messages** contains conversations. Tap a thread to continue it. Opening the conversation marks its messages as read.
 
 ## Who can message
 
-In-app messaging is part of Professional and Business. Starter includes visit notifications and does not include messaging or the client portal.
+Tap **New** from either tab to write a message. Providers choose a client. Clients automatically write to their service provider.
 
-If a client has joined Olyve, they have the same Inbox: notifications about their work, and a place to write you. See [Chat](/docs/chat).
+Messaging and client access are included with Professional and Business. Visit notifications are available on Starter.
+
+No updates yet? The Inbox fills automatically as visits are scheduled, invoices are created, payments are recorded, and messages arrive.

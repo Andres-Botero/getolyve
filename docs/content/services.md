@@ -1,21 +1,39 @@
 ---
-title: My services
-description: Your price list — name, description, and a default price you can override per client.
+title: Create and price services
+description: Build a reusable service list, then set the right price for each client.
 section: The work
 order: 2
 search: price list lawn service add delete default price
 ---
 
-**My Services** is the price list, not the schedule. Open it from the Home card. The bottom tab bar stays visible; services are not a separate tab of their own.
+Think of **My Services** as your price list. Create Lawn Mowing, Pool Cleaning, House Cleaning, or any other work once, then reuse it for each client.
 
-## Add a service
+## Create a service
 
-Tap **Add**. Give it a name, such as Lawn Mowing, an optional description, and an optional default price. If you leave the price blank, Olyve tells you that you can set one per client. If you set a default, the list notes that the price can still be customized per client.
+1. From Home, open **My Services**.
+2. Tap **Add**.
+3. Enter the **Service Name**.
+4. Add a description and default price if they are useful.
+5. Tap **Save**.
 
-## Use a service
+The default price saves time, but it is not permanent. You can charge a different price when you add the service to a particular client. If prices vary for every job, leave the default blank and set it client by client.
 
-Attaching a service does not put anything on the calendar. From a client, choose the service, confirm the price, and then create a schedule. See [Client management](/docs/clients) and [Calendar](/docs/calendar).
+## Add it to a client
 
-## Edit or delete
+1. Open **My Clients** and choose the client.
+2. Under **Services**, tap **+ Add Service**.
+3. Select the service.
+4. Keep **Default Price**, or enter a **Custom Price**.
+5. Tap **Confirm & Add Service**.
 
-Open a service to change the name, description, or default price. Delete asks you to confirm, using the service name in the question. Deleting the price-list item does not rewrite visits that already happened.
+You can also create a new service while choosing one for a client or while scheduling from the calendar.
+
+> Adding a service prepares it for scheduling. It does not create a visit by itself.
+
+## Change a service
+
+Open a service to update its name, description, or default price. Changes to the default do not replace a custom price you already set for a client.
+
+To remove a service, use the trash icon in the service list or open it, tap **Edit**, then **Delete Service**. Olyve asks you to confirm. Past visits remain in the client's history.
+
+Ready to put the work on the calendar? See [Schedule work](/docs/calendar).

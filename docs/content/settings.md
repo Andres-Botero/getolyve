@@ -1,21 +1,21 @@
 ---
 title: Settings
-description: Dark mode, English or Spanish, and the shortcut to billing.
+description: Choose light or dark mode, change the app language, or open billing.
 section: Account
 order: 2
 search: dark mode language spanish english appearance
 ---
 
-Open **Settings** from My Account. The screen is short on purpose: look, language, and a link to your plan.
+From Home, tap your photo, then **Settings**. Your choices are saved on this device.
 
 ## Billing
 
-Service providers see a **Billing** section at the top. It opens **Billing & Plan**, where you manage the Olyve subscription, card, and receipts. Client accounts do not see this row.
+Service providers see **Billing & Plan** at the top. Tap it to manage the Olyve subscription, payment method, and receipts. Clients do not have an Olyve subscription, so this row is hidden.
 
 ## Appearance
 
-**Dark mode** switches the whole app to the darker palette. The switch stays on this device. The marketing site has its own light and dark control and does not follow the app.
+Turn on **Dark mode** for a darker screen, especially useful at night. The website has its own theme setting and may look different from the app.
 
 ## Language
 
-**App language** is English or Español. The choice applies everywhere in Olyve: Home, calendars, invoices, empty states, and buttons. It does not translate notes, client names, or messages you typed yourself.
+Under **App language**, choose **English** or **Español**. Olyve translates its menus, buttons, and standard messages. Names, notes, and chat messages stay exactly as they were entered.

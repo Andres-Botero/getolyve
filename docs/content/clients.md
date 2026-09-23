@@ -1,37 +1,62 @@
 ---
-title: Client management
-description: Add people or companies, import a list, invite them, and attach services.
+title: Add and manage clients
+description: Keep contact details, services, schedules, and conversations together.
 section: The work
 order: 1
 search: clients import csv contacts paste invite company person
 ---
 
-**My Clients** is the book. Open it from Home or the Clients tab. The list is A to Z. Search by name. Filter **All**, **Person**, or **Company**. Each row shows whether that client is **On Olyve** or has **No account**.
+Open **My Clients** from Home or tap **Clients** in the bottom menu. Search by name, or use **All**, **Person**, and **Company** to narrow the list. The label beside each name tells you whether the client is already **On Olyve**.
 
-Starter includes up to 25 clients. Professional and Business do not cap the list.
+## Add a client
 
-## Add one client
+1. Tap **Add**.
+2. Choose **Add one**.
+3. Select **Person** or **Company**.
+4. Enter the required names, then add any contact details or notes you want to keep.
+5. Tap **Save**.
 
-Tap **Add**, then **Add one**. Choose person or company.
+A person needs a first and last name. A company needs a company name plus the contact person's first and last name. Phone, email, address, unit, city, state, ZIP code, and notes are optional.
 
-A person needs a first and last name. A company needs a company name, and can also store a contact name. Both can have phone, email, street, unit, city, state, ZIP, and notes.
+> Tip: Add an email address before inviting a client. It makes joining Olyve much easier for them.
 
-## Import a list
+Starter supports up to 25 clients. Professional and Business include unlimited clients.
 
-**Add** also offers:
+## Import several clients
 
-- **Import CSV** — pick a text or CSV file. An empty file is rejected.
-- **Paste list** — one client per line, or columns copied from a spreadsheet. A name is enough. Phone, email, and address help.
-- **Choose contacts** — pick people from the phone. Nothing is imported until you select them, and contacts are never synced in the background.
+Tap **Add**, then choose the option that matches what you have:
 
-Every import stops on a review screen so you can check the rows before they become clients.
+- **Import CSV** for a spreadsheet export.
+- **Paste list** for rows copied from a spreadsheet or a simple list with one client per line.
+- **Choose contacts** to select people from your phone.
 
-## The client record
+Nothing is imported automatically. Olyve always opens **Review import** first. Rows marked **Ready** can be imported. **Already added** points out likely duplicates, and **Needs name** shows rows that need fixing. Use **Select ready only** when you want to skip questionable rows, then tap **Import**.
 
-Open a client to edit their details. The same screen holds the services you do for them.
+## Update or delete a client
 
-**Invite to Olyve** creates an invite so they can see your company on their calendar. After they join, the row changes to **On Olyve**, they get Inbox and My Schedule, and you can message them in the app. The client portal and invite codes are on Professional and Business.
+Open the client and tap **Edit**. You can change their contact details, address, and notes. **Delete Client** is at the bottom while editing and asks for confirmation.
 
-## Services on the client
+The same client page also gives you shortcuts to:
 
-A visit needs a service attached to that client first. If none are assigned, the record says **No services assigned**. Add one from your price list, then confirm the price. Leave the price empty to use the service default, or type a custom price for this client only. Services can be scheduled after they are on the client. See [My services](/docs/services) and [Visits](/docs/visits).
+- See or add the services you provide.
+- Schedule a service or edit its schedule.
+- Open that client's calendar.
+- Send a message after they join Olyve.
+
+## Add a service to a client
+
+Before you can schedule work, add at least one service to the client:
+
+1. Open the client.
+2. Under **Services**, tap **+ Add Service**.
+3. Choose a service from your list, or tap **Create New Service**.
+4. On **Set Price**, keep the default price or enter a custom price for this client.
+5. Tap **Confirm & Add Service**.
+
+Adding a service does not schedule a visit. Tap **Schedule** beside the service when you are ready to put it on the calendar. See [Create and price services](/docs/services).
+
+## Invite a client to Olyve
+
+Tap **Invite to Olyve** on the client page. Your phone opens the share sheet with the invite code and instructions ready to send.
+
+After the client joins, their label changes to **On Olyve**. They can see their schedule and updates, and you can message each other in the app. See [Join Olyve as a client](/docs/join-as-a-client).

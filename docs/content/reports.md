@@ -1,27 +1,33 @@
 ---
-title: My reports
-description: Collected, invoiced, what is still open, and who to follow up with.
+title: Understand your reports
+description: See what you billed, collected, still need to invoice, and should follow up on.
 section: Money
 order: 6
 search: collected outstanding unbilled aging this week this month
 ---
 
-**My Reports** is the Home card that answers whether the week got billed and collected. It is on Professional and Business. Starter does not include reports.
+Open **My Reports** from Home for a quick health check on the business. Reports are included with Professional and Business.
 
 ## Range
 
-**This week** and **This month** are the usual views. **Custom** asks for a from date and a to date. The numbers below compare with the previous range: last week, last month, or the span just before your custom dates.
+Choose **This week**, **This month**, or **Custom**. A custom report uses the dates under **From** and **To**. Olyve compares the selected range with the previous week, month, or matching custom period.
 
 ## The numbers
 
-**Collected** is what you recorded in the range. **Invoiced** is what you billed. **Collection rate** is collected against invoiced. If there were no invoices, the rate says so. Each figure notes the change versus the previous range.
+**Collected** is the total of payments recorded in the range. **Invoiced** is the total of invoices created in the range. The percentage below each compares it with the previous period.
 
-**Outstanding** is the open balance, split into aging: 0–30 days, 31–60, and 61+ days. The summary calls out money older than 60 days when you have it, or says you are caught up when nothing is open.
+**Collection rate** is Collected divided by Invoiced. Beside it, Olyve shows the previous period's rate. If there were no invoices, the rate is left blank.
 
-**Unbilled work** counts completed visits that still have no invoice, with the amount sitting on those visits. That is the list to turn into invoices. See [Visit actions](/docs/visit-actions).
+**Outstanding** is the unpaid balance across invoices. Aging groups it by how long ago the invoice was created: 0–30 days, 31–60 days, and 61+ days.
 
-**Next 7 days** is how many visits are still scheduled, so you can see the route ahead of the money.
+**Unbilled work** counts completed visits that still have money due and no invoice. This is the work to review when you are ready to catch up on billing.
+
+**Next 7 days** shows both the number and value of upcoming scheduled visits.
 
 ## Who to follow up
 
-The last section lists clients with open balances, so collections has a name attached, not only a total.
+**Who to follow up** lists up to five clients with open balances and how much each owes.
+
+**Collected by service** shows which services brought in the most money during the selected range.
+
+> Start with the message at the top. Olyve first points out unbilled completed work, then overdue balances, then other open money. If none apply, it tells you that you are caught up.

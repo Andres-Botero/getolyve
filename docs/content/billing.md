@@ -1,24 +1,24 @@
 ---
-title: Billing and plans
-description: The trial, Starter, Professional, and Business, plus cards and receipts.
+title: Choose and manage your plan
+description: Compare plans, add a card, switch billing periods, find receipts, or cancel.
 section: Account
 order: 3
 search: stripe subscription trial starter professional business yearly monthly cancel
 ---
 
-**Billing & Plan** is where a service provider pays for Olyve. Open it from My Account, from Settings, or from the trial card on Home. Client accounts stay free and do not see this screen.
+Open **Billing & Plan** from My Account, Settings, or the trial notice on Home. This page is for service providers. Client accounts are free.
 
-Charges are in US dollars and are made by Axial Motion, the company behind Olyve. Card details are entered on Stripe, not stored in the app.
+Olyve charges are in US dollars and appear from Axial Motion. Stripe securely handles your card details; Olyve does not store them.
 
 ## Trial
 
-New provider accounts start a **14-day Professional trial**. The trial does not create a receipt. Home shows how many days are left, and My Account shows the plan line, for example `Professional · Free trial · 6 days left`.
+New provider accounts receive a **14-day Professional trial** with no card required. Home shows the days remaining. A trial is free, so it does not create a receipt.
 
-When the trial ends, the status becomes **Expired** and Home asks you to choose a plan. Pick a plan to keep using Olyve.
+When the trial ends, Home shows **Trial ended** and points you back to the plan choices.
 
 ## Plans
 
-Switch **Monthly** or **Yearly** at the top of the plan list. Yearly is ten months of the monthly price: two months free.
+Use **Monthly** and **Yearly** above the plan cards to compare prices. Annual billing includes two months free.
 
 **Starter — $19 a month, or $190 a year.** Organize a solo route.
 
@@ -44,18 +44,22 @@ Starter does not include invoices, estimates, reports, the client portal, or in-
 - Priority support
 - Team seats and custom branding are marked coming soon
 
-The button on your current paid plan reads **Current plan**. During a trial it reads **Subscribe now**. Checkout opens in the browser.
+Choose the plan that fits the way you work. Your current paid plan says **Current plan**. During the trial, **Subscribe now** opens Stripe Checkout in your browser.
 
 ## Payment method
 
-After you subscribe, **Update card** or **Add card** opens Stripe. If you have not subscribed yet, Olyve tells you to pick a plan first.
+After subscribing, tap **Add card** or **Update card** to open Stripe. Before subscribing, choose a plan first.
 
 ## Cancel or keep the plan
 
-**Cancel plan** keeps access until the end of the current period. You can reactivate before then with **Keep my plan**. Status labels you may see: Free trial, Active, Past due, Canceled, Expired. Past due means the card charge failed; update the card to keep the plan.
+Tap **Cancel plan** and confirm to stop renewal. You keep the plan through the end of the paid period. If you change your mind before then, tap **Keep my plan**.
+
+**Past due** means a charge failed. Update the card in Stripe to resolve it. Other status labels are Free trial, Active, Canceled, and Expired.
 
 ## Billing history
 
-Paid Olyve charges are listed with an invoice number, description, date, and amount. The trial does not appear here. This history is what you pay Axial Motion. It is separate from the invoices you send your own clients. Those live in [My invoices](/docs/my-invoices).
+Scroll to **Billing history** for paid Olyve charges, with the receipt number, description, date, and amount.
+
+These are receipts for your Olyve subscription. They are separate from the invoices you create for customers in [Find and manage invoices](/docs/my-invoices).
 
 Public billing, refund, and cancellation terms are also on [getolyve.com/billing](/billing) and [getolyve.com/refunds](/refunds).

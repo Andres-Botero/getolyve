@@ -1,47 +1,38 @@
 ---
-title: My account
-description: Profile photo, business details, review links, and where account tools live.
+title: Update your account
+description: Change your profile photo, contact details, business address, and review links.
 section: Account
 order: 1
 search: profile avatar information logout business address
 ---
 
-Open **My Account** from the profile photo on Home. The screen shows your photo, your business name (or your name), and your current plan if you are a service provider.
+From Home, tap your photo in the top-left corner to open **My Account**. If you have a business name, Olyve shows it first with your name underneath. Service providers also see their current plan.
 
 ## Profile photo
 
-Tap the photo to choose one from your library. The image must be 150 by 150 pixels or smaller. Olyve uploads it to your account and uses it in the header.
+Tap the photo, then choose an image from your library. It must be 150 × 150 pixels or smaller. After upload, the new photo appears on Home and My Account.
 
 ## My Information
 
-**My Information** is the record Olyve uses on invoices, review requests, and your public identity in the app.
+Tap **My Information** to make changes.
 
-**Account**
+Under **Account**, update your full name and phone. Your email is the address used to create the account and cannot be changed.
 
-- **Email** is the address you signed up with. It cannot be changed.
-- **Full name** is required.
-- **Phone** is optional.
+Under **Business**, add the name and address you want to use on invoices and in the app. Tap **Save** in the header when you finish. Olyve does not warn you about unsaved changes if you go back.
 
-**Business**
+## Prepare review requests
 
-- Business name
-- Street address, unit, city, state, and ZIP
+The **Reviews** section controls the message and links used by [Ask for a review](/docs/request-a-review).
 
-Save before you leave. A confirmation appears when the update succeeds.
+- Write a friendly review message. Use `{name}` for the client's name and `{business}` for your business name.
+- Paste your Google review, Yelp, or website link.
 
-**Reviews**
+For example: `Hi {name}, thank you for choosing {business}. If you have a moment, a review would mean a lot.`
 
-These fields are used by [Request a review](/docs/request-a-review):
-
-- **Review message.** Use `{name}` for the client and `{business}` for your business. Example: `Hi {name}, thank you for choosing {business}.`
-- **Google review link**
-- **Yelp link**
-- **Website**
-
-At least one link is required before a review request can be shared or sent.
+You need at least one link before Olyve can share or send the request.
 
 ## Other rows
 
-- **Billing & Plan** appears for service providers. Client accounts do not see it. See [Billing and plans](/docs/billing).
-- **Settings** is appearance and language. See [Settings](/docs/settings).
-- **Log Out** asks you to confirm, then returns you to the sign-in screen.
+- **Billing & Plan** manages a provider's subscription, card, and receipts. Client accounts do not see it.
+- **Settings** changes dark mode and language.
+- **Log Out** asks for confirmation, then returns to sign in.

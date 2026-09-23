@@ -1,38 +1,46 @@
 ---
-title: Visits
-description: What a visit record holds, and the path from scheduled to paid.
+title: View a visit
+description: See the service, date, price, notes, invoice, payment, and current status.
 section: The work
 order: 4
 search: scheduled completed cancelled skipped invoiced paid status
 ---
 
-A visit is one stop: a client, a service, a date, a price, and a status. Open it from the calendar or from a client’s schedule.
+Tap a visit on the calendar to open **Visit Detail**. This is the record for one stop: who it was for, what you did, when it happened, and whether you were paid.
 
-## What you see
+## Details
 
-The visit shows the service, the client, the scheduled date, and a completed date once you mark it done. Notes sit on the record. Below that, any invoices and payments already tied to the visit are listed, with a way to open them.
+The **Details** tab includes:
 
-The display status is the one that matters day to day:
+- Client and service
+- Scheduled date and completed date
+- Current status
+- Visit price
+- Notes
+- Any invoice or payment connected to the visit
+- When the visit was created and last updated
 
-- **Scheduled** — still on the route
-- **Completed** — you marked the work done
-- **Skipped** — it did not happen, and it was not billed
-- **Cancelled** — you cancelled it
-- **Invoiced** — an invoice exists and it is not fully paid
-- **Paid** — the invoice or the visit payment is recorded
+Tap an invoice or payment to open its full record.
 
-Invoiced and paid are display states. They lock further status changes.
+## Understand the status
 
-## Price
+- **Scheduled** — the visit is still waiting to be completed.
+- **Completed** — you marked the work as done.
+- **Cancelled** — the visit was cancelled.
+- **Skipped** — the visit was skipped. This status may appear on an existing record, but it is not currently available in **Update Status**.
+- **Invoiced** — an unpaid invoice is connected to the visit.
+- **Paid** — payment has been recorded.
 
-While a visit is still scheduled, the price can be edited if it is tied to a client service. The action shows the current price, or asks you to set one. That price is what a later invoice uses. You do not retype it on a blank form.
+Invoiced and Paid are automatic. Once either applies, Olyve locks the visit status so the billing record stays consistent.
 
-## What has to happen first
+## Change the price
 
-Create Invoice and Record Payment stay disabled until the visit is no longer scheduled. The hint on those buttons is **Mark this visit as complete first**. A skipped or cancelled visit is not a billing path.
+While the visit is Scheduled, open **Actions** and tap **Edit Visit Price**. The new price is used when you create the invoice.
 
-Request Review becomes available once the visit is completed, invoiced, or paid.
+The price can only be edited when the visit is connected to a service on that client. If the action is unavailable, open the client and check that the service is assigned.
 
-## Clients
+## What clients see
 
-A client looking at My Schedule sees their visits. They do not get the provider actions for invoicing, recording payment, or editing the price.
+Clients can open their visits from **My Schedule**. They see Details and History, including invoices and payments connected to their work. Provider-only actions—changing a price, completing work, invoicing, and recording payment—are hidden.
+
+For the next step after a visit, see [Complete and bill a visit](/docs/visit-actions).

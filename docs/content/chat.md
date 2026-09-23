@@ -1,21 +1,31 @@
 ---
-title: Chat
-description: Start a thread, reply, and message a client who has joined Olyve.
+title: Send a message
+description: Start a conversation, reply to a client, or write your service provider.
 section: Communication
 order: 2
 search: message conversation new send thread
 ---
 
-Chat is the Messages tab of [Inbox](/docs/inbox). It is a direct thread with a client, not a group chat and not a substitute for the visit record. The job still lives on the calendar; the thread sits next to it.
+Messages are private, one-to-one conversations between a service provider and a client who has joined Olyve.
 
 ## Start a conversation
 
-On the Messages tab, tap **New**. Pick the client you want to write. You can only message a client who has an Olyve account. Invite them from the client record first if they are not on Olyve yet. See [Client management](/docs/clients).
+1. Open **Inbox** and select **Messages**.
+2. Tap **New**.
+3. Search by name, email, or phone and choose the client.
+4. Write your message.
+5. Tap **Send**.
+
+Only clients who are **On Olyve** can receive an in-app message. The client picker may still show someone who has not joined; if sending fails, open that client and use **Invite to Olyve** first.
 
 ## Inside a thread
 
-The title is the conversation name, usually the other person. Type in the field at the bottom and tap **Send**. Messages you already sent stay in the thread. Opening the thread marks it read, which clears that part of the Inbox badge.
+Open any thread to see earlier messages. Type at the bottom and tap **Send**. Opening the thread clears its unread count.
+
+Clients can also tap **New**. Their recipient is shown as **Your service provider**, so they do not need to choose anyone.
 
 ## From a review request
 
-[Request a review](/docs/request-a-review) can drop the review message into this thread with **Send in Olyve**, when the client has an account and you have saved a review link. **Share or copy** is the path for WhatsApp, Messages, or anyone who is not in the app.
+[Ask for a review](/docs/request-a-review) can send your saved request into the same conversation. For a client who has not joined Olyve, use **Share or copy** and send it through Messages, WhatsApp, or email.
+
+> Use visit notes for a permanent record of completed work. Use Messages for conversation around the job.

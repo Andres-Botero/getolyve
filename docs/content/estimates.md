@@ -1,21 +1,30 @@
 ---
-title: My estimates
-description: Quote one-time or recurring work, with tax and a valid-until date.
+title: Create and share an estimate
+description: Quote one-time or recurring work, add tax, and download a PDF for the client.
 section: Money
 order: 7
 search: quote estimate recurring weekly tax valid until
 ---
 
-**My Estimates** is the quote before the work is on the calendar. Estimates and their PDFs are on Professional and Business.
+Use an estimate when a client needs a price before you schedule the work. Estimates and PDF copies are included with Professional and Business.
 
 ## The list
 
-Each row is **One-time** or a recurring frequency: weekly, biweekly, or monthly. It shows the total, the client, the service, the created date, and **Valid until** when you set one. **View estimate** opens it. Search the list. The list is paged.
+Open **My Estimates** from Home. Search by client, address, service, or estimate number. Each row shows the total, client, service, created date, and **Valid until** when set. Recurring quotes are labeled Weekly, Bi-weekly, or Monthly.
 
-An empty account offers **Create Estimate**.
+Tap **View estimate** to open Summary, Preview, and History. Olyve shows 50 estimates at a time; use **Prev** and **Next** for more.
 
 ## Create one
 
-**+ New** asks for the client, the service, and a subtotal. Choose one-time or recurring. Recurring needs a frequency. Tax is optional: a percentage of the subtotal, or a fixed amount. The total is subtotal plus tax. **Valid until** is optional and is the date the quote expires.
+1. Tap **+ New**.
+2. Choose a client.
+3. Choose a saved service, or select **Custom Service** and enter a name and description.
+4. Enter the subtotal.
+5. Add optional percentage or fixed tax.
+6. Choose whether the service is recurring. Recurring estimates can be Weekly, Bi-Weekly, or Monthly.
+7. Add an optional **Valid until** date and notes.
+8. Tap **Create Estimate**.
 
-Open the estimate later to read the quote and its history. **Preview** shows the PDF, and **Download PDF** saves `Estimate_` plus the estimate number. Sending an estimate does not create a visit or an invoice. When the client accepts, attach the service and schedule the visit the usual way. See [Calendar](/docs/calendar).
+Open **Preview**, then tap **Download PDF** to save or send `Estimate_` followed by the estimate number.
+
+Downloading or sharing the PDF does not mark the estimate accepted, create a visit, or create an invoice. After the client approves the work, add the service to their account and [schedule it](/docs/calendar).
