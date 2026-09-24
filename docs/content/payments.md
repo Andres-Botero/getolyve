@@ -24,9 +24,9 @@ The payment amount is set to the full remaining balance and cannot currently be 
 
 For completed work that does not need an invoice, open the visit and tap **Record Payment**. On the calendar, this action may be called **Mark as Paid**. Review the visit total, choose the date and method, then tap **Save Payment**.
 
-Olyve labels this as a **Direct Payment**. Starter can record direct payments even though it does not include invoices.
+Olyve labels this as a **Direct Payment**.
 
-You cannot record payment while a visit is still Scheduled. On a recurring schedule, the action appears only when payment is due.
+You cannot record payment while a visit is still Scheduled. On a recurring schedule, direct payment actions appear only when payment is due. Creating an invoice from the visit's **Actions** tab is still available after completion.
 
 ## Methods
 
@@ -39,6 +39,6 @@ Add a note if you need to remember a check number or who handed you the cash. It
 
 ## What changes after you save
 
-The payment appears in **My Payments**, labeled **From Invoice** or **Direct Payment**. The invoice and visit change to Paid, and the visit status locks so the billing record stays consistent.
+The payment appears in **My Payments**, labeled **From Invoice** or **Direct Payment**. Once the balance is fully paid, the invoice and visit change to Paid. A visit status locks as soon as it is Invoiced, and remains locked after payment.
 
 Open the payment for its number, amount, method, date, client, and the invoice or visit it belongs to.

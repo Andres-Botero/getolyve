@@ -6,7 +6,7 @@ order: 1
 search: invoice unpaid paid tax preview create
 ---
 
-Professional and Business include invoices and PDF copies. The quickest way to invoice scheduled work is from the completed visit. You can also create an invoice manually for work that is not on the calendar.
+The quickest way to invoice scheduled work is from the completed visit. You can also create an invoice manually for work that is not on the calendar.
 
 ## From a completed visit
 
@@ -17,7 +17,9 @@ Professional and Business include invoices and PDF copies. The quickest way to i
 5. Choose percentage or fixed tax if needed, and add an optional note.
 6. Tap **Create Invoice**.
 
-The visit changes to Invoiced and the action becomes **View Invoice**. If the action is disabled, complete the visit first. If it does not appear on a recurring service, payment may not be due on this visit.
+The visit changes to Invoiced and the action becomes **View Invoice**. If the action is disabled, complete the visit first.
+
+On the calendar, **Generate Invoice** only appears when payment is due for that recurring service. The visit's **Actions** tab still offers **Create Invoice** after completion.
 
 ## From My Invoices
 
@@ -35,12 +37,12 @@ The invoice appears as Unpaid.
 
 Open an invoice for three tabs:
 
-- **Summary** shows client details, line items, subtotal, tax, total, amount paid, remaining balance, and notes.
+- **Summary** shows client details, line items, subtotal, tax, total, and notes. After a payment is recorded, it also shows the amount paid and remaining balance.
 - **Preview** displays the PDF and offers **Download PDF**.
-- **History** records when the invoice was created, paid, and last updated.
+- **History** records Created, each Payment Received, and Last Updated when the invoice changed after creation.
 
 A client who has joined Olyve can open an invoice you sent them. They can read the summary, preview, and history. They do not get **Mark as Paid**. You record the payment on your side.
 
 ## Paid and unpaid
 
-An invoice stays **Unpaid** until its remaining balance is recorded as paid. The current app's **Mark as Paid** flow records the full remaining balance in one payment. Once saved, the invoice and its visit change to Paid.
+An invoice stays **Unpaid** until its remaining balance is recorded as paid. The current app's **Mark as Paid** flow records the full remaining balance in one payment. Once fully paid, the invoice and its visit change to Paid.

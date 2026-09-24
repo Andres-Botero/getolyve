@@ -10,7 +10,7 @@ Open **Inbox** from Home. The badge counts everything you have not read. When so
 
 ## Two tabs
 
-**Notifications** contains updates about scheduled, completed, cancelled, or rescheduled visits, along with invoices and payments. Tap one to open the related item and mark it read. Tap **Mark all** to clear every unread notification.
+For clients, **Notifications** contains updates about scheduled, completed, cancelled, or rescheduled visits, along with invoices and payments from their provider. On a provider account, this tab is mainly used for new-message activity. Tap an item to open it and mark it read. Tap **Mark all** to clear every unread notification.
 
 **Messages** contains conversations. Tap a thread to continue it. Opening the conversation marks its messages as read.
 
@@ -18,6 +18,6 @@ Open **Inbox** from Home. The badge counts everything you have not read. When so
 
 Tap **New** from either tab to write a message. Providers choose a client. Clients automatically write to their service provider.
 
-Messaging and client access are included with Professional and Business. Visit notifications are available on Starter.
+In-app messaging and client invites currently work for provider accounts on every plan.
 
-No updates yet? The Inbox fills automatically as visits are scheduled, invoices are created, payments are recorded, and messages arrive.
+For a client, the Inbox fills as the provider schedules or updates visits, creates invoices, records payments, and sends messages. Providers receive message activity here.

@@ -6,7 +6,7 @@ order: 3
 search: pdf download preview share print
 ---
 
-Every invoice created on Professional or Business includes a PDF.
+Every invoice includes a PDF copy.
 
 ## Preview
 
@@ -26,6 +26,6 @@ You can also open **View Invoice** from a calendar visit and tap **Download PDF*
 
 ## What the PDF is
 
-The document includes your saved business details, the client, service or line items, subtotal, tax, total, status, and notes.
+The document includes your saved business details, invoice and due dates, the client, service or line items, subtotal, tax, total, total due, and notes. A Paid row appears after payment; the PDF does not show a separate Paid or Unpaid status badge.
 
 This is the invoice you send your customer. Receipts for your own Olyve subscription are under **Billing & Plan → Billing history**.

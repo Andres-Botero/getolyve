@@ -6,11 +6,11 @@ order: 6
 search: collected outstanding unbilled aging this week this month
 ---
 
-Open **My Reports** from Home for a quick health check on the business. Reports are included with Professional and Business.
+Open **My Reports** from Home for a quick health check on the business.
 
 ## Range
 
-Choose **This week**, **This month**, or **Custom**. A custom report uses the dates under **From** and **To**. Olyve compares the selected range with the previous week, month, or matching custom period.
+Choose **This week**, **This month**, or **Custom**. This week runs from Monday through today, and This month runs from the first of the month through today. A custom report uses the dates under **From** and **To**. Olyve compares the selected range with the previous week, month, or matching custom period.
 
 ## The numbers
 
@@ -28,6 +28,6 @@ Choose **This week**, **This month**, or **Custom**. A custom report uses the da
 
 **Who to follow up** lists up to five clients with open balances and how much each owes.
 
-**Collected by service** shows which services brought in the most money during the selected range.
+**Collected by service** shows up to six services that brought in the most money during the selected range.
 
 > Start with the message at the top. Olyve first points out unbilled completed work, then overdue balances, then other open money. If none apply, it tells you that you are caught up.

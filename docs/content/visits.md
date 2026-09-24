@@ -6,7 +6,7 @@ order: 4
 search: scheduled completed cancelled skipped invoiced paid status
 ---
 
-Tap a visit on the calendar to open **Visit Detail**. This is the record for one stop: who it was for, what you did, when it happened, and whether you were paid.
+Tap a visit on the calendar to open it. The header shows the service name and scheduled date. This is the record for one stop: who it was for, what you did, when it happened, and whether you were paid.
 
 ## Details
 

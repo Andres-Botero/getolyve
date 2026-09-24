@@ -29,8 +29,8 @@ Tap **Use a different code** if the business or client name does not look right.
 
 From Home, use:
 
-- **My Schedule** to see upcoming and past visits.
+- **My Schedule** on Home to see upcoming and past visits. It opens the **Calendar** tab, where the screen title is **My Calendar**.
 - **Inbox** for visit, invoice, and payment updates.
-- **Messages** to write your service provider.
+- **Inbox → Messages** to write your service provider.
 
-You can open visits, invoices, payments, and their history. Your provider remains responsible for scheduling work, changing prices, creating invoices, and recording payments.
+Open visits from My Schedule or Calendar. Invoices and payments open from Inbox notifications or from a related visit; client Home does not have separate My Invoices or My Payments sections. Your provider remains responsible for scheduling work, changing prices, creating invoices, and recording payments.

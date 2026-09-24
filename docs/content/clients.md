@@ -6,7 +6,7 @@ order: 1
 search: clients import csv contacts paste invite company person
 ---
 
-Open **My Clients** from Home or tap **Clients** in the bottom menu. Search by name, or use **All**, **Person**, and **Company** to narrow the list. The label beside each name tells you whether the client is already **On Olyve**.
+Open **My Clients** from Home or tap **Clients** in the bottom menu. Search by name, or use **All**, **Person**, and **Company** to narrow the list. The pill beside each name says **On Olyve** or **No account**.
 
 ## Add a client
 
@@ -19,8 +19,6 @@ Open **My Clients** from Home or tap **Clients** in the bottom menu. Search by n
 A person needs a first and last name. A company needs a company name plus the contact person's first and last name. Phone, email, address, unit, city, state, ZIP code, and notes are optional.
 
 > Tip: Add an email address before inviting a client. It makes joining Olyve much easier for them.
-
-Starter supports up to 25 clients. Professional and Business include unlimited clients.
 
 ## Import several clients
 
@@ -40,7 +38,7 @@ The same client page also gives you shortcuts to:
 
 - See or add the services you provide.
 - Schedule a service or edit its schedule.
-- Open that client's calendar.
+- Tap **View {name}'s Calendar** to see only that client's visits.
 - Send a message after they join Olyve.
 
 ## Add a service to a client

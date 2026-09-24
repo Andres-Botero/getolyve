@@ -32,9 +32,9 @@ Olyve keeps each step connected, so you can open a visit later and see the notes
 ## Find your way around
 
 - Tap your photo at the top left of Home for account, business, plan, and settings.
-- Tap the search icon at the top right to find clients, invoices, estimates, and payments.
-- Use **Home**, **Calendar**, and **Clients** in the bottom menu for daily work.
-- Open **My Services**, **My Invoices**, **My Payments**, **My Reports**, and **My Estimates** from Home.
+- Service providers can use the search icon at the top right to find clients, invoices, estimates, and payments.
+- Service providers use **Home**, **Calendar**, and **Clients** in the bottom menu, and open Services and financial tools from Home.
+- Clients use **Home** for Inbox and My Schedule, then **Calendar** to browse their visits. The Clients tab is not intended for client accounts.
 
 ## Need a person?
 

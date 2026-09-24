@@ -14,9 +14,9 @@ Messages are private, one-to-one conversations between a service provider and a 
 2. Tap **New**.
 3. Search by name, email, or phone and choose the client.
 4. Write your message.
-5. Tap **Send**.
+5. Tap **Send** in the top-right corner.
 
-Only clients who are **On Olyve** can receive an in-app message. The client picker may still show someone who has not joined; if sending fails, open that client and use **Invite to Olyve** first.
+Only clients who are **On Olyve** can receive an in-app message. The New message picker does not label account status and may still show someone who has not joined. If sending fails because the client has no app login, open that client and use **Invite to Olyve** first.
 
 ## Inside a thread
 

@@ -10,7 +10,7 @@ Open **My Invoices** from Home for every customer invoice in one place.
 
 ## The list
 
-Each row shows the invoice number, Paid or Unpaid, total, client, service, and service date. If money remains, the balance appears under **Remaining**.
+Each row shows the invoice number, Paid or Unpaid, total, client, service, and service date. After a partial payment, an unpaid invoice also shows **Remaining**.
 
 - Tap **View invoice** for Summary, Preview, and History.
 - Tap **Mark as Paid** to record the full remaining balance.

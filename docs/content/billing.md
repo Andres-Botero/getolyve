@@ -16,6 +16,8 @@ New provider accounts receive a **14-day Professional trial** with no card requi
 
 When the trial ends, Home shows **Trial ended** and points you back to the plan choices.
 
+> Current app behavior: an expired trial shows upgrade reminders, but it does not yet lock the rest of the app.
+
 ## Plans
 
 Use **Monthly** and **Yearly** above the plan cards to compare prices. Annual billing includes two months free.
@@ -28,7 +30,7 @@ Use **Monthly** and **Yearly** above the plan cards to compare prices. Annual bi
 - Record cash, check, Zelle, and bank payments
 - Visit notifications
 
-Starter does not include invoices, estimates, reports, the client portal, or in-app messaging.
+The Starter plan card does not list invoices, estimates, reports, the client portal, or in-app messaging.
 
 **Professional — $39 a month, or $390 a year.** Recommended. Run the full business from your phone.
 
@@ -45,6 +47,8 @@ Starter does not include invoices, estimates, reports, the client portal, or in-
 - Team seats and custom branding are marked coming soon
 
 Choose the plan that fits the way you work. Your current paid plan says **Current plan**. During the trial, **Subscribe now** opens Stripe Checkout in your browser.
+
+> The plan cards describe Olyve's intended limits. In the current app, client count and features such as invoices, estimates, reports, invites, and messaging are not yet restricted by paid plan.
 
 ## Payment method
 

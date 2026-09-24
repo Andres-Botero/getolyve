@@ -6,7 +6,7 @@ order: 3
 search: global search contacts invoice estimate payment filter
 ---
 
-Tap the search icon in the top-right corner of Home to search across your account.
+Service providers can tap the search icon in the top-right corner of Home to search across their business. Client accounts currently have only partial search results, so clients should open visits and documents from Calendar or Inbox instead.
 
 ## Find something
 

@@ -24,7 +24,7 @@ The **Mark Visit as Complete** sheet shows the service and date. Add a note if y
 4. Review the client, service, date, and price.
 5. Confirm the invoice.
 
-The button becomes **View Invoice** after the invoice is created, so the same visit cannot be billed twice. Invoices are included with Professional and Business.
+The button becomes **View Invoice** after the invoice is created, so the same visit cannot be billed twice through the app.
 
 ## Record an invoice payment
 
@@ -34,9 +34,7 @@ If the invoice is still open, tap **Mark as Paid**. Confirm the amount, payment 
 
 If you collected cash, a check, Zelle, or a bank transfer and do not need an invoice, tap **Record Payment** on the completed visit. Olyve saves it as a direct payment connected to the visit.
 
-Starter can record direct payments even though invoices are not part of that plan.
-
-If neither billing action appears on the calendar, check the schedule's **Payment Frequency**. Payment may not be due on this visit.
+If billing actions do not appear on the calendar, check the schedule's **Payment Frequency**. Payment may not be due on this visit. The visit's **Actions** tab follows a slightly different rule: **Record Payment** still waits until payment is due, while **Create Invoice** is available after completion.
 
 ## Fix a status or note
 

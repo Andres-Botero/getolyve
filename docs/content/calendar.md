@@ -23,7 +23,7 @@ If the service is not on that client yet, Olyve adds it as part of scheduling.
 
 Open the client, find the service, and tap **Schedule**. Use **Edit Schedule** later to change it.
 
-For a one-time visit, choose the date and optionally a time and notes. Recurring work can repeat:
+For a one-time schedule, choose the date and optionally enter a time and schedule note. These optional schedule fields are saved on the schedule, but they are not currently shown on the generated visit card or visit details. Recurring work can repeat:
 
 - Weekly or biweekly on a chosen day
 - Monthly
@@ -49,6 +49,6 @@ A scheduled visit has three quick actions:
 
 After completion, the calendar may show **Generate Invoice**, **Mark as Paid**, **View Invoice**, or **View Payment**, depending on how that service is billed.
 
-If you completed a visit by mistake, tap **Reopen** before it is invoiced. This returns it to Scheduled. Once an invoice exists, the visit can no longer be reopened.
+If you completed a visit by mistake, tap **Reopen** before it is invoiced. This returns it to Scheduled. The calendar hides Reopen once an invoice exists. A directly paid visit without an invoice may still show Reopen on the calendar, although **Update Status** in the visit itself is locked after payment.
 
 Clients see their visits from **My Schedule** on Home. They can open details and history, but cannot schedule, complete, invoice, or edit your work.
